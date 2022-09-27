@@ -1,0 +1,109 @@
+!define BLANK ""
+D:\work\arun\EVENT.obj : D:\work\arun\SRC\EVENT.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\EVENT.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od -s&
+ -d2 -3r -bt=dos -mf
+
+D:\work\arun\EYE.obj : D:\work\arun\SRC\EYE.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\EYE.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od -s -&
+d2 -3r -bt=dos -mf
+
+D:\work\arun\GIL2VFX.obj : D:\work\arun\SRC\GIL2VFX.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\GIL2VFX.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od &
+-s -d2 -3r -bt=dos -mf
+
+D:\work\arun\GRAPHICS.obj : D:\work\arun\SRC\GRAPHICS.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\GRAPHICS.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od&
+ -s -d2 -3r -bt=dos -mf
+
+D:\work\arun\INTERP.obj : D:\work\arun\SRC\INTERP.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\INTERP.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od -&
+s -d2 -3r -bt=dos -mf
+
+D:\work\arun\INTRFACE.obj : D:\work\arun\SRC\INTRFACE.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\INTRFACE.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od&
+ -s -d2 -3r -bt=dos -mf
+
+D:\work\arun\MODSND32.obj : D:\work\arun\src\MODSND32.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 src\MODSND32.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od&
+ -s -d2 -3r -bt=dos -mf
+
+D:\work\arun\RTCODE.obj : D:\work\arun\SRC\RTCODE.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\RTCODE.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od -&
+s -d2 -3r -bt=dos -mf
+
+D:\work\arun\RTLINK.obj : D:\work\arun\SRC\RTLINK.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\RTLINK.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od -&
+s -d2 -3r -bt=dos -mf
+
+D:\work\arun\RTOBJECT.obj : D:\work\arun\SRC\RTOBJECT.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\RTOBJECT.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od&
+ -s -d2 -3r -bt=dos -mf
+
+D:\work\arun\RTRES.obj : D:\work\arun\SRC\RTRES.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\RTRES.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od -s&
+ -d2 -3r -bt=dos -mf
+
+D:\work\arun\RTSYSTEM.obj : D:\work\arun\SRC\RTSYSTEM.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\RTSYSTEM.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od&
+ -s -d2 -3r -bt=dos -mf
+
+D:\work\arun\SOUND32.obj : D:\work\arun\SRC\SOUND32.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 SRC\SOUND32.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od &
+-s -d2 -3r -bt=dos -mf
+
+D:\work\arun\MOUSE.obj : D:\work\arun\VFX\MOUSE.C .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ *wcc386 VFX\MOUSE.C -i=D:\WATCOM\h;vfx;ail -w4 -e25 -wcd138 -zp1 -zq -od -s&
+ -d2 -3r -bt=dos -mf
+
+D:\work\arun\arun.exe : D:\work\arun\EVENT.obj D:\work\arun\EYE.obj D:\work\&
+arun\GIL2VFX.obj D:\work\arun\GRAPHICS.obj D:\work\arun\INTERP.obj D:\work\a&
+run\INTRFACE.obj D:\work\arun\MODSND32.obj D:\work\arun\RTCODE.obj D:\work\a&
+run\RTLINK.obj D:\work\arun\RTOBJECT.obj D:\work\arun\RTRES.obj D:\work\arun&
+\RTSYSTEM.obj D:\work\arun\SOUND32.obj D:\work\arun\MOUSE.obj D:\work\arun\A&
+IL\AIL32.H D:\work\arun\SRC\DEFS.H D:\work\arun\SRC\EVENT.H D:\work\arun\SRC&
+\EYE.H D:\work\arun\SRC\GIL2VFX.H D:\work\arun\SRC\GIL2VFXA.H D:\work\arun\S&
+RC\GRAPHICS.H D:\work\arun\SRC\INTRFACE.H D:\work\arun\SRC\MOD32.H D:\work\a&
+run\src\MODSND32.H D:\work\arun\SRC\NAMES.H D:\work\arun\SRC\RT.H D:\work\ar&
+un\SRC\RTCODE.H D:\work\arun\SRC\RTLINK.H D:\work\arun\SRC\RTMSG.H D:\work\a&
+run\SRC\RTOBJECT.H D:\work\arun\SRC\RTRES.H D:\work\arun\SRC\RTSYSTEM.H D:\w&
+ork\arun\SRC\SHARED.H D:\work\arun\SRC\SOUND.H D:\work\arun\VFX\MOUSE.H D:\w&
+ork\arun\vfx\VFX.H D:\work\arun\ail\AIL32.OBJ D:\work\arun\ASM\GIL2VFXA.obj &
+D:\work\arun\ASM\MOD32.obj D:\work\arun\asm\RT.obj D:\work\arun\VFX\DLLLOAD.&
+OBJ D:\work\arun\vfx\VFXA.OBJ D:\work\arun\XFER\XFER.OBJ .AUTODEPEND
+ @D:
+ cd D:\work\arun
+ @%write arun.lk1 FIL EVENT.obj,EYE.obj,GIL2VFX.obj,GRAPHICS.obj,INTERP.obj,&
+INTRFACE.obj,MODSND32.obj,RTCODE.obj,RTLINK.obj,RTOBJECT.obj,RTRES.obj,RTSYS&
+TEM.obj,SOUND32.obj,MOUSE.obj,ail\AIL32.OBJ,ASM\GIL2VFXA.obj,ASM\MOD32.obj,a&
+sm\RT.obj,VFX\DLLLOAD.OBJ,vfx\VFXA.OBJ,XFER\XFER.OBJ
+ @%append arun.lk1 
+ *wlink name arun d all SYS dos4g op m op maxe=25 op q op symf @arun.lk1
+

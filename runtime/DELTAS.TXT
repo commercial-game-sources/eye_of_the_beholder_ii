@@ -1,0 +1,38 @@
+Eye of the Beholder III / Release 1.1/628 of 28-Jun-1993
+--------------------------------------------------------
+
+Source file     Modification
+-----------     ------------
+
+PC.SOP          Bonus levels granted can no longer cause PC to exceed max lvl
+
+EYE.SCR         Message "new level" changed to make sense for 1 hit point case
+                    
+EYE.SCR         Added message "no spell items in niches"
+
+CHARCOPY.EXE    Installed updated version from SSI
+
+FEATURES.SOP    "consume" handler added to "wall of force" to fix expiration
+                bug
+
+FEATURES.SOP    Dynamic items (e.g. Sol's Searing Orb) can no longer be
+                placed in niches
+                
+WWLIB.LIB       Patched to allow character-generation program CHGEN.EXE to
+                run correctly in file-sharing environments such as OS/2 and
+                DOS with SHARE or similar TSRs
+
+
+Eye of the Beholder III / Release 1.1/706 of 06-Jul-1993
+--------------------------------------------------------
+
+EYE.SCR         Title screen now compiled from 'menu11.bmp', not 'menu.bmp'
+                (for V1.1 text change)
+
+
+Eye of the Beholder III / Release 2.0/1025 of 25-Oct-1993
+---------------------------------------------------------
+
+Many files      AESOP interpreter converted to 32-bit protected mode for
+                increased performance
+

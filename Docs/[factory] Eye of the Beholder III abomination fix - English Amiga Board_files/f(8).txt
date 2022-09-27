@@ -1,0 +1,392 @@
+/**
+ * @fileoverview Provides layout specific functionality for HTML5 layout.
+ * This includes layout specific directives, that are responsible for
+ * interaction with the user, alignment of the blocks and texts in them.
+ * Also includes layout specification and initialization.
+ */
+
+
+/**
+ * Utils object with specific functionality for the layout.
+ * @param {!angular.Object} ng AngularJS object.
+ * @return {!Object.<function>} Available functions.
+ */
+var layoutUtils = (function(ng) {
+  /**
+   * Minimal price font size.
+   * @const {number}
+   */
+  var PRICE_MIN_FONT_SIZE = 7;
+
+  /**
+   * Time to change the product.
+   * @const {number}
+   */
+  var CYCLE_TIMEOUT = 5000;
+
+  var module = ng.module('custom', []);
+  var loadedRes = [];
+  var preloader = utils.preloader;
+
+  window.onAdData = function(data, util) {
+    initPreloading(data);
+    preloader.addCompletionListener(function() {
+      loadedRes = preloader.getLoadedImages();
+      utils.onAdData(data, util);
+    });
+    preloader.start();
+  };
+
+
+  /**
+   * Creates the list of the CSS classes to apply to the layout content
+   * depending on parameters from DAB.
+   * @param {!angular.Scope} scope AngularJS layout scope.
+   * @return {!Object.<string>} All available CSS classes.
+   */
+  function getClasses(scope) {
+    var design = scope.design;
+    var layout = [design['cornerStyle']];
+    var bg = [];
+    var btn = [design['btnStyle']];
+
+    if (scope.toBoolean(design['bgGradient'])) {
+      bg.push('gradient');
+    }
+    if (design['bgImageUrl'] && design['bgImageUrl'] !== 'none' &&
+        design['bgImageUrl'] !== 'blank' &&
+        scope.checkUrl(design['bgImageUrl'])) {
+      bg.push('image-bg');
+    }
+    if (scope.toBoolean(design['btnBevel'])) {
+      btn.push('bevel');
+    }
+    if (scope.toBoolean(design['btnShad'])) {
+      btn.push('shadow');
+    }
+
+    return {
+      layout: layout.join(' '),
+      bg: bg.join(' '),
+      button: btn.join(' ')
+    };
+  }
+
+
+  /**
+   * Controller for using data binding in layout.
+   * @param {!angular.Scope} $scope AngularJS layout scope.
+   * @param {!Object} dynamicData Dynamic data from DAB.
+   * @param {!angular.$timeout} $timeout The Angular timeout service.
+   */
+  function LayoutController($scope, dynamicData, $timeout) {
+    helpers.LayoutController($scope, dynamicData);
+
+    var i;
+    var prices;
+    for (i = 0; i < $scope.products.length; i++) {
+      prices = setPrices($scope.products[i]);
+
+      $scope.products[i].price = prices.price;
+      $scope.products[i].salePrice = prices.salePrice;
+    }
+
+
+    // Maximum number of products.
+    $scope.maxLen = 6;
+
+    $scope.currProd = $scope.products[0];
+    if ($scope.design.priceSize < PRICE_MIN_FONT_SIZE) {
+      $scope.design.priceSize = PRICE_MIN_FONT_SIZE;
+    }
+    $scope.classes = getClasses($scope);
+    $scope.counter = 0;
+
+
+    /**
+     * Implements logic for products change cycle. Every new product will
+     * automatically show on timeout.
+     */
+    $scope.onTimeout = function() {
+      $scope.counter++;
+      if ($scope.counter == $scope.maxLen ||
+          $scope.counter > $scope.products.length - 1) {
+        // Switch to the first product and stop on it.
+        $scope.currProd = $scope.products[0];
+        $scope.selectedIndex = 0;
+        carouselTimeout = $timeout($scope.stopTimer, CYCLE_TIMEOUT);
+      } else {
+        $scope.currProd = $scope.products[$scope.counter];
+        $scope.selectedIndex = $scope.counter;
+        carouselTimeout = $timeout($scope.onTimeout, CYCLE_TIMEOUT);
+      }
+    };
+
+
+    /**
+     * Stops auto product cycle.
+     */
+    $scope.stopTimer = function() {
+      $timeout.cancel(carouselTimeout);
+    };
+
+
+    /**
+     * Checks whether the price block should be shown.
+     * @return {boolean} Returns true if the prices block is visible.
+     */
+    $scope.checkPricesVisibility = function() {
+      return ($scope.toBoolean($scope.headline.showPrice)) &&
+          (!$scope.isEmpty($scope.currProd.price) ||
+          !$scope.isEmpty($scope.currProd.salePrice));
+    };
+
+
+    /**
+     * Checks whether the price should be shown.
+     * @return {boolean} Returns true if the price is visible.
+     */
+    $scope.checkPriceVisibility = function() {
+      return ($scope.toBoolean($scope.headline.showPrice)) &&
+          !$scope.isEmpty($scope.currProd.price);
+    };
+
+
+    /**
+     * Checks whether the CTA button should be centered.
+     * @return {boolean} Returns true if the CTA button should be centered.
+     */
+    $scope.checkCenterButton = function() {
+      return ((!$scope.currProd.salePrice && !$scope.currProd.price) ||
+          ($scope.toBoolean($scope.headline.showPrice))) &&
+          !$scope.currProd.name;
+    };
+
+
+    /**
+     * Sets the current product.
+     * @param {!angular.$event} $event Angular event object.
+     * @param {!angular.JQLite} product Element to use as current product.
+     * @param {number} index Product index.
+     */
+    $scope.changeCurrProd = function($event, product, index) {
+      $scope.currProd = product;
+      $scope.selectedIndex = index;
+    };
+
+    if ($scope.layoutType != LayoutTypes.MIN) {
+      var carouselTimeout = $timeout($scope.onTimeout, CYCLE_TIMEOUT);
+    }
+  }
+
+
+  /**
+   * Sets prices for the products.
+   * @param {!Object} product AngularJS object representing product.
+   * @return {!Object.<number>} Returns object with updated product and sales
+   *    prices.
+   */
+  function setPrices(product) {
+    var price;
+    var salePrice;
+    var regularPrice;
+
+    price = product.price;
+    salePrice = product.salePrice;
+    regularPrice = product.regularPrice;
+
+    if (!regularPrice && salePrice) {
+      price = '';
+    } else if (!salePrice) {
+      if (!price) {
+        price = regularPrice;
+      } else {
+        salePrice = price;
+        price = regularPrice;
+      }
+    } else {
+      price = regularPrice;
+    }
+
+    if (!salePrice && price) {
+      salePrice = price;
+    }
+    if (price == salePrice) {
+      price = '';
+    }
+
+    return {
+      price: price,
+      salePrice: salePrice
+    };
+  }
+
+
+  /**
+   * Calls image fit for the passed element.
+   * @param {!angular.JQLite} el The jQuery element object to handle.
+   */
+  function imageFit(el) {
+    new ddab.layouts.utils.DynamicImageFit(el[0],
+        el.attr('loc'), el.attr('scaletype'), el.attr('aligntype'));
+  }
+
+
+  /**
+   * Exposes Update as a custom attribute. Updates the view of the block.
+   * @return {angular.Directive} Directive definition object.
+   */
+  module.directive('update', function() {
+    return {
+      restrict: 'A',
+      link: function(scope, el) {
+        scope.$watch('currProd', function() {
+
+          if (scope.toBoolean(scope.headline.productClickOnly)) {
+            scope.fieldReference = 'Product_' + scope.selectedIndex + '_url';
+          } else {
+            scope.fieldReference = '';
+          }
+
+          if (el.attr('show-hide') !== undefined) {
+            var blocks = el.children();
+            var ind = parseInt(el.attr('selectedIndex'), 10);
+            var priceContainer = blocks[ind].querySelector('.productPrice');
+
+            for (var i = 0; i < blocks.length; i++) {
+              ng.element(blocks[i]).addClass('invisible');
+            }
+
+            if (priceContainer != null) {
+              ng.element(blocks[ind].querySelector('.productPriceStrike')).css({
+                'font-size': helpers.getStyleProperty(priceContainer,
+                    'fontSize') + 'px'
+              });
+            }
+            ng.element(blocks[ind]).removeClass('invisible');
+          } else {
+
+            el.css({
+              'width': '',
+              'height': '',
+              'font-size': '',
+              'line-height': ''
+            });
+
+            if (el.attr('ext-image-fit') !== undefined) {
+              imageFit(el);
+            }
+
+            if (el.attr('flex-fit') !== undefined) {
+              helpers.flex(el);
+            }
+          }
+        });
+      }
+    };
+  });
+
+
+  /**
+   * Exposes enhanced DynamicImageFit as a custom attribute.
+   * @param {!angular.$timeout} $timeout The Angular timeout service.
+   * @return {angular.Directive} Directive definition object.
+   */
+  module.directive('extImageFit', function($timeout) {
+    return {
+      restrict: 'A',
+      link: function(scope, el) {
+        $timeout(function() {
+          imageFit(el);
+        });
+      }
+    };
+  });
+
+  ng.module('layout', ['utils', module.name],
+      function($controllerProvider) {
+    $controllerProvider.allowGlobals();
+  });
+
+  return {
+    preloader: preloader,
+    LayoutController: LayoutController
+  };
+})(angular);
+
+(function() {
+  // Retail vertical
+  utils.defineMeta('version', '3.0');
+  utils.defineMeta('layoutName', 'Template35');
+
+  // REQUIRED
+  utils.defineAttribute('Headline', 'productClickOnly', true);
+  utils.defineAttribute('Product', 'url', true);
+
+  // OPTIONAL
+  utils.defineAttribute('Headline', 'cta', false);
+  utils.defineAttribute('Headline', 'showPrice', false);
+  utils.defineAttribute('Product', 'name', false);
+  utils.defineAttribute('Product', 'price', false);
+  utils.defineAttribute('Product', 'salePrice', false);
+  utils.defineAttribute('Product', 'regularPrice', false);
+  utils.defineAttribute('Product', 'imageUrl', false);
+  utils.defineAttribute('Design', 'logoImageUrl', false);
+  utils.defineAttribute('Design', 'logoPadding', false);
+  utils.defineAttribute('Design', 'bgImageUrl', false);
+  utils.defineAttribute('Design', 'bgAlpha', false);
+  utils.defineAttribute('Design', 'bgColor', false);
+  utils.defineAttribute('Design', 'bgGradient', false);
+  utils.defineAttribute('Design', 'borderColor', false);
+  utils.defineAttribute('Design', 'cornerStyle', false);
+  utils.defineAttribute('Design', 'btnStyle', false);
+  utils.defineAttribute('Design', 'btnBevel', false);
+  utils.defineAttribute('Design', 'btnShad', false);
+  utils.defineAttribute('Design', 'btnColor', false);
+  utils.defineAttribute('Design', 'btnRollColor', false);
+  utils.defineAttribute('Design', 'txtColorCta', false);
+  utils.defineAttribute('Design', 'glowColor', false);
+  utils.defineAttribute('Design', 'txtColorTitle', false);
+  utils.defineAttribute('Design', 'txtColorPrice', false);
+  utils.defineAttribute('Design', 'txtColorProduct', false);
+  utils.defineAttribute('Design', 'txtColorDisc', false);
+  utils.defineAttribute('Design', 'headlineSize', false);
+  utils.defineAttribute('Design', 'nameSize', false);
+  utils.defineAttribute('Design', 'priceSize', false);
+  utils.defineAttribute('Design', 'fontUrl', false);
+
+  utils.defineOccurrences('Headline', 1, 1);
+  utils.defineOccurrences('Design', 1, 1);
+  utils.defineOccurrences('Product', 6, 6);
+
+  window.setup = function() {
+    var adContainer = document.getElementById('ad-container');
+    var products = document.getElementById('products');
+    var layoutType = adContainer.getAttribute('layout-type') || '';
+
+    adContainer.addEventListener('click', utils.clickHandler, false);
+
+    products.addEventListener('click',
+        function(event) {
+
+          // Mobile layouts have a separate logic due to the different design.
+          // The other adsizes have thumbnails and previews, click on the thumb
+          // should change the preview, but should not exit from the layout.
+          // Mobile sizes have only thumbs, that should lead to the exit URL.
+          // stopPropagation and preventDefault are used because the
+          // clickHandler is applied to the main layout container.
+          if (layoutType != LayoutTypes.MIN) {
+            event.stopPropagation();
+            event.preventDefault();
+          }
+        }, false);
+  };
+
+  window.initPreloading = function(dynamicData) {
+    var data = dynamicData.google_template_data.adData[0];
+    var design = utils.parse(data, 'Design')[0];
+    var preloader = layoutUtils.preloader;
+    preloader.addImage(design.logoImageUrl);
+    preloader.addImage(design.bgImageUrl);
+  };
+})();

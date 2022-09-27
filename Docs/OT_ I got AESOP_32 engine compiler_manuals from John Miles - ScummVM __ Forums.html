@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://forums.scummvm.org/viewtopic.php?t=2397 -->
+<html dir="ltr" lang="en-gb"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" sizes="180x180" href="https://forums.scummvm.org/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://forums.scummvm.org/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://forums.scummvm.org/favicon-16x16.png">
+<link rel="manifest" href="https://forums.scummvm.org/site.webmanifest">
+<link rel="mask-icon" href="https://forums.scummvm.org/safari-pinned-tab.svg" color="#4635e6">
+<meta name="apple-mobile-web-app-title" content="ScummVM Forums">
+<meta name="application-name" content="ScummVM Forums">
+<meta name="msapplication-TileColor" content="#cc6600">
+<meta name="theme-color" content="#cc6600">
+
+<title>OT: I got AESOP/32 engine compiler/manuals from John Miles - ScummVM :: Forums</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - ScummVM :: Forums" href="https://forums.scummvm.org/app.php/feed?sid=fb8849aba22459478f3e254eaa1b73aa">			<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forums.scummvm.org/app.php/feed/topics?sid=fb8849aba22459478f3e254eaa1b73aa">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - General Discussion" href="https://forums.scummvm.org/app.php/feed/forum/1?sid=fb8849aba22459478f3e254eaa1b73aa">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - OT: I got AESOP/32 engine compiler/manuals from John Miles" href="https://forums.scummvm.org/app.php/feed/topic/2397?sid=fb8849aba22459478f3e254eaa1b73aa">	
+	<link rel="canonical" href="https://forums.scummvm.org/viewtopic.php?t=2397">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/font-awesome.min.css" rel="stylesheet">
+<link href="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/stylesheet.css" rel="stylesheet">
+<link href="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/stylesheet(1).css" rel="stylesheet">
+
+
+
+	<link href="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/cookieconsent.min.css" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/scummvm/theme/tweaks.css?assets_version=11" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+<style></style></head>
+<body id="phpbb" class="notouch section-viewtopic ltr hasjs"><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-classic cc-bottom cc-color-override--1687565279 cc-invisible" style="display: none;"><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">This website uses cookies to ensure you get the best experience on our website. <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="http://cookiesandyou.com/" rel="noopener noreferrer nofollow" target="_blank">Learn more</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">Got it!</a></div><!--googleon: all--></div>
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+			<div id="site-description" class="site-description">
+				<div class="logo">
+					<img class="background hide-small" src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/maniac-half.png" alt="Maniac Mansion kids">
+					<a href="https://forums.scummvm.org/index.php?sid=fb8849aba22459478f3e254eaa1b73aa" title="Board index">
+						<img class="foreground" src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/scummvm_logo.png" alt="">
+					</a>
+				</div>
+				<p class="skiplink"><a href="https://forums.scummvm.org/viewtopic.php?t=2397#start_here">Skip to content</a></p>
+			</div>
+
+      <div id="affiliate" class="affiliate">Buy Supported Games: <b><a href="http://www.gog.com/?pp=22d200f8670dbdb3e253a90eee5098477c95c23d">GOG.com</a></b></div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="https://forums.scummvm.org/search.php?sid=fb8849aba22459478f3e254eaa1b73aa" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…">
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="https://forums.scummvm.org/search.php?sid=fb8849aba22459478f3e254eaa1b73aa" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					<input type="hidden" name="sid" value="fb8849aba22459478f3e254eaa1b73aa">
+
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="https://forums.scummvm.org/viewtopic.php?t=2397#" class="dropdown-trigger dropdown-toggle">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="https://forums.scummvm.org/search.php?search_id=unanswered&amp;sid=fb8849aba22459478f3e254eaa1b73aa" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://forums.scummvm.org/search.php?search_id=active_topics&amp;sid=fb8849aba22459478f3e254eaa1b73aa" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="https://forums.scummvm.org/search.php?sid=fb8849aba22459478f3e254eaa1b73aa" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="https://forums.scummvm.org/app.php/help/faq?sid=fb8849aba22459478f3e254eaa1b73aa" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside" data-skip-responsive="true">
+			<a href="https://forums.scummvm.org/ucp.php?mode=login&amp;redirect=viewtopic.php%3Ft%3D2397&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="https://forums.scummvm.org/ucp.php?mode=register&amp;sid=fb8849aba22459478f3e254eaa1b73aa" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+								<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList" style="max-width: 769px;">
+										<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope=""><a href="https://forums.scummvm.org/index.php?sid=fb8849aba22459478f3e254eaa1b73aa" itemtype="https://schema.org/Thing" itemscope="" itemprop="item" accesskey="h" data-navbar-reference="index" title="Board index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1"></span>
+
+																			<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope="" data-forum-id="22"><a href="https://forums.scummvm.org/viewforum.php?f=22&amp;sid=fb8849aba22459478f3e254eaa1b73aa" itemtype="https://schema.org/Thing" itemscope="" itemprop="item" title="Main Forums"><span itemprop="name">Main Forums</span></a><meta itemprop="position" content="2"></span>
+																							<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope="" data-forum-id="1"><a href="https://forums.scummvm.org/viewforum.php?f=1&amp;sid=fb8849aba22459478f3e254eaa1b73aa" itemtype="https://schema.org/Thing" itemscope="" itemprop="item" title="General Discussion"><span itemprop="name">General Discussion</span></a><meta itemprop="position" content="3"></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="https://forums.scummvm.org/search.php?sid=fb8849aba22459478f3e254eaa1b73aa" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="https://forums.scummvm.org/viewtopic.php?f=1&amp;t=2397&amp;sid=fb8849aba22459478f3e254eaa1b73aa">OT: I got AESOP/32 engine compiler/manuals from John Miles</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">General chat related to ScummVM, adventure gaming, and so on.<br></div>
+<p>
+	<strong>Moderator:</strong> <a href="https://forums.scummvm.org/memberlist.php?mode=group&amp;g=4&amp;sid=fb8849aba22459478f3e254eaa1b73aa">ScummVM Team</a>
+</p>
+
+	<div class="rules rules-link">
+		<div class="inner">
+
+					<a href="https://forums.scummvm.org/viewtopic.php?f=1&amp;t=17">Forum rules</a>
+		
+		</div>
+	</div>
+
+<div class="action-bar bar-top">
+	
+			<a href="https://forums.scummvm.org/posting.php?mode=reply&amp;f=1&amp;t=2397&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://forums.scummvm.org/search.php?sid=fb8849aba22459478f3e254eaa1b73aa">
+			<fieldset>
+				<input class="inputbox search tiny" type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…">
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="https://forums.scummvm.org/search.php?sid=fb8849aba22459478f3e254eaa1b73aa" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="2397">
+<input type="hidden" name="sf" value="msgonly">
+<input type="hidden" name="sid" value="fb8849aba22459478f3e254eaa1b73aa">
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			15 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p13774" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13774">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13774">
+
+						<h3 class="first"><a href="https://forums.scummvm.org/viewtopic.php?p=13774&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p13774">OT: I got AESOP/32 engine compiler/manuals from John Miles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=13774&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=13774&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p13774" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-09-21T06:29:46+00:00">Thu Sep 21, 2006 6:29 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Hi<br>
+I apologize if it does not belong here (feel free to move it elsewhere), but I think this is something in which people here could be interested...<br>
+<br>
+"Eye of Beholder 3" and "Dungeon Hack" are based on one (though modified) engine: AESOP/16. Virtually nothing was known about it. After some mailing with John Miles (better known for the Miles Sound System) I received sources for the script complier (the engine uses its own bytecode) and the documentation. I do not have interpreter (too much SSI copyrighted code), but maybe interpreters from EOB 3/DH could be used (not tested) or maybe - if somebody is interested (I certainly do not feel to the task myself!) - a new interpreter written...<br>
+<br>
+In any case - I have explicit permission to do whatever I want with it from John Miles (he is the only copyright holder for AESOP), so feel free to download it/modify it/upload elsewhere.<br>
+<br>
+At the moment it is for download on VOGONS in the thread I mention at the end of this post (read it also to get some background info - e.g. why there were slowdowns in EOB 3 when the game was shipped etc.), but feel free to do whatever you want with it/make your own web for it etc.<br>
+Just give credits to John Miles, he is very nice to the open source community.<br>
+<br>
+Here is the thread with the download:<br>
+<a href="http://vogons.zetafleet.com/viewtopic.php?p=91341#91341" class="postlink">http://vogons.zetafleet.com/viewtopic.php?p=91341#91341</a><br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p13816" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13816">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13816">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=13816&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p13816"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=13816&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=13816&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p13816" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-09-22T09:33:23+00:00">Fri Sep 22, 2006 9:33 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I have received one more thing from John Miles (again, freely usable/distributable, download from the mentioned thread on VOGONS). I did not have a look on it yet<br>
+<br>
+Mirek<br>
+<br>
+From mail by John Miles:
+<blockquote class="uncited"><div>
+...<br>
+ I managed to dig up some runtime<br>
+code that is free of any IP owned by SSI or other parties, if it helps:<br>
+&lt;go to VOGONS for dl link&gt;<br>
+<br>
+This is absolutely all I can release, unless you can figure out who owns the<br>
+game code these days and convince them to open-source it. <img class="smilies" src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"><br>
+<br>
+-- john<br>
+...
+</div></blockquote></div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p13972" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13972">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=1978&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="avatar"><img class="avatar" src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/1978.gif" width="60" height="60" alt="User avatar"></a>														</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=1978&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">df</a>							</dt>
+
+						<dd class="profile-rank">ScummVM Developer</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=1978&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">38</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu May 25, 2006 2:05 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13972">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=13972&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p13972"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=13972&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=13972&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p13972" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=1978&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">df</a></strong> » </span><time datetime="2006-09-25T16:05:18+00:00">Mon Sep 25, 2006 4:05 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">i dl'ld the vogons files and i will take a look. nice!<br>
+<br>
+looks overly more complex than it needed to be but hey, atleast he was kind enough to provide the compiler and some interp source!</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p14000" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile14000">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=9&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="avatar"><img class="avatar" src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/9.png" width="90" height="90" alt="User avatar"></a>														</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=9&amp;sid=fb8849aba22459478f3e254eaa1b73aa" style="color: #AA0000;" class="username-coloured">sev</a>							</dt>
+
+						<dd class="profile-rank">ScummVM Lead</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=9&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">2038</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Sep 21, 2005 1:06 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="https://forums.scummvm.org/viewtopic.php?t=2397#" class="dropdown-trigger dropdown-toggle" title="Contact sev">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact sev</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://sev-notes.blogspot.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content14000">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=14000&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p14000"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=14000&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=14000&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p14000" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=9&amp;sid=fb8849aba22459478f3e254eaa1b73aa" style="color: #AA0000;" class="username-coloured">sev</a></strong> » </span><time datetime="2006-09-26T09:33:28+00:00">Tue Sep 26, 2006 9:33 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Super! What could be done, is that somebody will pick this up, write a run-time engine and use as a base for open source game engine for creating graphical scripted games. The engine seems to be general enough, so not only RPGs could be made with it.<br>
+<br>
+<br>
+Eugene</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p14130" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile14130">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content14130">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=14130&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p14130"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=14130&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=14130&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p14130" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-09-30T13:24:32+00:00">Sat Sep 30, 2006 1:24 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Just a short information: I have made some attempts to compile the runtime (using as much original tools as possible - AIL, VFX libraries, Open Watcom...). I produced an EXE, though it does not work yet (needs more debugging).<br>
+If somebody wants to try this as well, there are some usefull information in the mentioned VOGONS thread (e.g. I spent a lot of time by finding out that I need to set a proper structure alignment in Watcom - RES files depend on it and Watcom has changed its default settings since the AESOP was made in the beginning of 1990s).<br>
+<br>
+See the VOGONS thread for details...<br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p15735" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile15735">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content15735">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=15735&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p15735">DAESOP 0.40</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=15735&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=15735&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p15735" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-11-02T14:38:32+00:00">Thu Nov 02, 2006 2:38 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I have been slowly developing a utility to analyze AESOP resource files (RES, like EYE.RES) etc. At the moment it can provide some information about the file or individual resources and also extract resources. I hope I will add AESOP disassembler in future.<br>
+The utility is called DAESOP. At the moment its version is 0.40.<br>
+It can be downloaded from the above mentioned thread on VOGONS.<br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p16109" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile16109">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content16109">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=16109&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p16109">DEAESOP 0.50</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=16109&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=16109&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p16109" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-11-11T18:52:47+00:00">Sat Nov 11, 2006 6:52 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">DAESOP 0.50 released <img class="smilies" src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"><br>
+<br>
+I made a new version of my DAESOP utility, this time adding the AESOP bytecode disassembler. This enables to disassemble the script code resources in the "Eye of Beholder 3", "Dungeon Hack" or even custom made AESOP based programs.<br>
+The syntax is the same as before. The disassembly is generated when using switches /j or /k on code related resource (code/import/export resources).<br>
+So for example use this line to generate disassembly of the "start" resource in the "Eye of Beholder 3":<br>
+<strong class="text-strong">daesop /j eye.res start start.txt</strong><br>
+<br>
+See the generated file start.txt for the disassembly of the "start" resource:
+<div class="codebox"><p>Code: <a href="https://forums.scummvm.org/viewtopic.php?t=2397#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>...
+*** CODE RESOURCE DISASSEMBLER &amp;#40;resource name start, resource number&amp;#58; 2388&amp;#41; ***
+
+.DISASSEMBLER_VERSION            1
+;Warning&amp;#58; imported/exported variables are not handled yet in this version.
+;
+;main data.OBJECT_NAME                     start
+.PARENT                          #ffffffff     ;-1
+;
+;other original settings
+.ORIGINAL_CODE_RESOURCE_SIZE     735
+.ORIGINAL_IMPORT_RESOURCE_SIZE   398
+.ORIGINAL_IMPORT_RESOURCE_NUMBER #0952     ;2386
+.ORIGINAL_EXPORT_RESOURCE_SIZE   65
+.ORIGINAL_EXPORT_RESOURCE_NUMBER #0953     ;2387
+.ORIGINAL_STATIC_SIZE            0
+;
+;
+.MESSAGE_HANDLER_NAME            enter game
+.LOCAL_VARIABLE_SIZE             2
+    16 &amp;#40;000010&amp;#41;&amp;#58; 20 00 00          RCRS    "C&amp;#58;create_program"  ;import_resource_number&amp;#58; 00
+    19 &amp;#40;000013&amp;#41;&amp;#58; 04                PUSH    
+    20 &amp;#40;000014&amp;#41;&amp;#58; 1d 00             SHTC    0
+    22 &amp;#40;000016&amp;#41;&amp;#58; 04                PUSH    
+    23 &amp;#40;000017&amp;#41;&amp;#58; 1e 66 05          INTC    1382
+    26 &amp;#40;00001a&amp;#41;&amp;#58; 21 02             CALL    2
+    28 &amp;#40;00001c&amp;#41;&amp;#58; 1d 00             SHTC    0
+    30 &amp;#40;00001e&amp;#41;&amp;#58; 04                PUSH    
+    31 &amp;#40;00001f&amp;#41;&amp;#58; 2e 00 00          LAD     0
+    34 &amp;#40;000022&amp;#41;&amp;#58; 22 01 fa 00       SEND    1, "enter game"  ;message_number&amp;#58; 250
+    38 &amp;#40;000026&amp;#41;&amp;#58; 20 04 00          RCRS    "C&amp;#58;destroy_object"  ;import_resource_number&amp;#58; 44
+    41 &amp;#40;000029&amp;#41;&amp;#58; 04                PUSH    
+    42 &amp;#40;00002a&amp;#41;&amp;#58; 1d 00             SHTC    0
+    44 &amp;#40;00002c&amp;#41;&amp;#58; 21 01             CALL    1
+    46 &amp;#40;00002e&amp;#41;&amp;#58; 56                END     
+;
+.MESSAGE_HANDLER_NAME            create
+.LOCAL_VARIABLE_SIZE             14
+    49 &amp;#40;000031&amp;#41;&amp;#58; 20 08 00          RCRS    "C&amp;#58;peekmem"  ;import_resource_number&amp;#58; 88
+    52 &amp;#40;000034&amp;#41;&amp;#58; 04                PUSH 
+...
+</code></pre></div>
+
+See the Vogons for download: <a href="http://vogons.zetafleet.com/viewtopic.php?p=94056#94056" class="postlink">http://vogons.zetafleet.com/viewtopic.php?p=94056#94056</a><br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p16429" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile16429">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content16429">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=16429&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p16429">DAESOP 0.60</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=16429&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=16429&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p16429" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-11-20T18:01:10+00:00">Mon Nov 20, 2006 6:01 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I made another version of my DAESOP utility yesterday (DAESOP 0.60). It can be again downloaded from Vogons.<br>
+Here is the information about what is new (copied from README):<br>
+...<br>
+The version 0.600 adds a lot of new things into the disassembler introduced in DAESOP 0.500. It concerns mainly variables. For most of variables (with exception of local "auto" variables) symbolic names are used. When possible (imported/exported variables), the real names are used. When it is not possible (private static variables, "table" variables), simple symbolic names are made. In future versions of DAESOP this will be done also for local variables. <br>
+The tables showing import/export resources were reworked and they now show properly all available items. The problem of not disassembling procedures (instructions JSR/RTS) was fixed. <br>
+Various minor things were fixed/improved.<br>
+...<br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p16663" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile16663">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content16663">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=16663&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p16663">Does anybody know the format of  bitmaps in EOB 3?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=16663&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=16663&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p16663" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-11-27T20:25:11+00:00">Mon Nov 27, 2006 8:25 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I am progressing nicely with my explorations of the AESOP engine (see on Vogons). I also try to make EOB 3 run with the AESOP/32 engine. At the moment I figured out that I need to replace the table of low level functions in EYE.RES (no problem) and to convert all bitmaps in EYE.RES (see Vogons thread for more information).<br>
+I have one problem at the moment:<br>
+<strong class="text-strong">Does anybody know the format of the bitmaps (images) in the "Eye Of Beholder 3"?</strong><br>
+I can extract the binary bitmaps with my DAESOP utility, but I do not know their format or how to convert them to something else ...<br>
+See the the thread on Vogons for more information and samples.<br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p16665" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile16665">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=9&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="avatar"><img class="avatar" src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/9.png" width="90" height="90" alt="User avatar"></a>														</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=9&amp;sid=fb8849aba22459478f3e254eaa1b73aa" style="color: #AA0000;" class="username-coloured">sev</a>							</dt>
+
+						<dd class="profile-rank">ScummVM Lead</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=9&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">2038</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Sep 21, 2005 1:06 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="https://forums.scummvm.org/viewtopic.php?t=2397#" class="dropdown-trigger dropdown-toggle" title="Contact sev">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact sev</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://sev-notes.blogspot.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content16665">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=16665&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p16665">Re: Does anybody know the format of  bitmaps in EOB 3?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=16665&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=16665&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p16665" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=9&amp;sid=fb8849aba22459478f3e254eaa1b73aa" style="color: #AA0000;" class="username-coloured">sev</a></strong> » </span><time datetime="2006-11-27T21:41:28+00:00">Mon Nov 27, 2006 9:41 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>mirekluza wrote:</cite><strong class="text-strong">Does anybody know the format of the bitmaps (images) in the "Eye Of Beholder 3"?</strong>
+</div></blockquote>
+Looks like <a href="http://www.doomworld.com/xwe/xwe-eob3.shtml" class="postlink">this guy</a> might now.<br>
+<br>
+<br>
+Eugene</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p17032" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile17032">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content17032">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=17032&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p17032">DAESOP 0.66</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=17032&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=17032&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p17032" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-12-08T14:44:17+00:00">Fri Dec 08, 2006 2:44 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">There is a new version (DAESOP 0.66) available for download on VOGONS (<a href="http://vogons.zetafleet.com/viewtopic.php?p=95733#95733" class="postlink">http://vogons.zetafleet.com/viewtopic.php?p=95733#95733</a>).<br>
+<br>
+Since the version 0.60 the following things were added to DAESOP:<br>
+- command line parameter /ir (showing even more information about resources: original filenames if available, resource types, values of string resources)<br>
+- command line parameters /r, /rh  (enabling to replace any resource in an existing RES file by another one)<br>
+<br>
+JackAsser from the "English Amiga Board" did some good work with analyzing BMP format used in the "Eye of Beholder 3" (<a href="http://eab.abime.net/showthread.php?t=24436&amp;page=7" class="postlink">http://eab.abime.net/showthread.php?t=24436&amp;page=7</a>), so hopefully I will be able to implement in the near future the bitmap conversion (AESOP/16 &gt; AESOP/32) to DAESOP (necessary step to make the EOB 3 run in the AESOP/32).<br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p17184" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile17184">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content17184">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=17184&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p17184"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=17184&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=17184&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p17184" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-12-14T14:09:34+00:00">Thu Dec 14, 2006 2:09 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I implemented the bitmap conversion (EOB 3 &gt; AESOP/32) in <strong class="text-strong">DAESOP 0.70</strong> <a href="http://vogons.zetafleet.com/viewtopic.php?p=96111#96111" class="postlink">http://vogons.zetafleet.com/viewtopic.php?p=96111#96111</a>.<br>
+This enables to convert the "Eye of Beholder 3" to the AESOP/32 engine and the game is partially playable using the EXEs we got from John Miles (I did not build a proper runtime from the provided sources yet - I will bother with this after having the conversions done).<br>
+The game runs, the graphic is ok, but the texts are missing (I think the fonts need conversion as well) - therefore I say "partially playable".<br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p17308" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile17308">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content17308">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=17308&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p17308">DAESOP 0.75</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=17308&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=17308&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p17308" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-12-20T08:20:58+00:00">Wed Dec 20, 2006 8:20 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I added the font conversion to the <strong class="text-strong">DAESOP 0.75</strong>. This means that all texts in the "Eye of Beholder 3" are now show when it runs in AESOP/32.<br>
+You can download DAESOP 0.75 in the above mentioned thread on VOGONS.<br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p17589" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile17589">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content17589">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=17589&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p17589">EOB 3 save/load bug in the AESOP/32 was fixed</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=17589&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=17589&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p17589" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2006-12-28T13:10:38+00:00">Thu Dec 28, 2006 1:10 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I found out how to fix the crashing bug when loading/saving when running the "Eye of Beholder 3" in the AESOP/32 (by changing 4 bytes in EYE.RES). Details are in the thread on VOGONS.<br>
+This makes the game playable in the AESOP/32 (though I played just a short time at the beginning of the game, so there may be problems later).<br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p18341" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile18341">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://forums.scummvm.org/search.php?author_id=3246&amp;sr=posts&amp;sid=fb8849aba22459478f3e254eaa1b73aa">15</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 05, 2006 8:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content18341">
+
+						<h3><a href="https://forums.scummvm.org/viewtopic.php?p=18341&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p18341">DAESOP 0.85, AESOP/32 build from sources</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://forums.scummvm.org/posting.php?mode=quote&amp;f=1&amp;p=18341&amp;sid=fb8849aba22459478f3e254eaa1b73aa" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="https://forums.scummvm.org/viewtopic.php?p=18341&amp;sid=fb8849aba22459478f3e254eaa1b73aa#p18341" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://forums.scummvm.org/memberlist.php?mode=viewprofile&amp;u=3246&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="username">mirekluza</a></strong> » </span><time datetime="2007-01-24T08:01:32+00:00">Wed Jan 24, 2007 8:01 am</time>
+			</p>
+			
+			
+			
+			<div class="content">There are following news concerning the AESOP since I posted here last time:<br>
+<br>
+<strong class="text-strong">DAESOP 0.85</strong><br>
+It can now fully convert the "Eye of Beholder 3" to be able to run in the AESOP/32. This works with the binary provided by John Miles and with the binary I compiled on my own (see below for more information about the build).<br>
+<a href="http://vogons.zetafleet.com/viewtopic.php?p=98090#98090" class="postlink">http://vogons.zetafleet.com/viewtopic.php?p=98090#98090</a><br>
+<br>
+<strong class="text-strong">AESOP/32 interpreter build from sources is available</strong><br>
+I managed to make a build from sources. You can download on VOGONS the whole project for "Open Watcom" which enables to build an interpreter. It works ok, though there may be a small bug in sound mixer (see on Vogons) - so at the moment I recommend it only for testing.<br>
+This package could be a base for porting the AESOP/32 to other OSes if anybody wants to do it (read on Vogons for details).<br>
+<a href="http://vogons.zetafleet.com/viewtopic.php?p=97017#97017" class="postlink">http://vogons.zetafleet.com/viewtopic.php?p=97017#97017</a><br>
+<br>
+<strong class="text-strong">Source code for the AESOP/32 sound mixer is available</strong><br>
+I already used it in the build above. The original code can be downloaded on Vogons as well.<br>
+<a href="http://vogons.zetafleet.com/viewtopic.php?p=96771#96771" class="postlink">http://vogons.zetafleet.com/viewtopic.php?p=96771#96771</a><br>
+<br>
+At the moment I am planning to start to work on porting "Dungeon Hack" to the AESOP/32 (basically implementing missing runtime functions - after finding out/guessing what they do).<br>
+<br>
+Mirek</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="https://forums.scummvm.org/viewtopic.php?t=2397#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="https://forums.scummvm.org/posting.php?mode=reply&amp;f=1&amp;t=2397&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+	
+			<form method="post" action="https://forums.scummvm.org/viewtopic.php?f=1&amp;t=2397&amp;sid=fb8849aba22459478f3e254eaa1b73aa">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed">
+				<input type="submit" class="button2" name="sort" value="Go">
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			15 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="https://forums.scummvm.org/viewforum.php?f=1&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “General Discussion”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="https://forums.scummvm.org/viewforum.php?f=22&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-cat-link"> <span> Main Forums</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=1&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; General Discussion</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=2&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Help and Support</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=19&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Fangame Creation</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=8&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; The Junkyard</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=23&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-cat-link"> <span> ScummVM Ports</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=17&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Android Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=9&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Dreamcast Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=14&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; GP2X/GP2XWiz/Caanoo Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=15&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; iPhone Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=12&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Maemo Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=13&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Nintendo DS Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=24&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Nintendo Switch Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=18&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; OpenPandora Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=5&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; PalmOS Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=10&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; PlayStation 2 Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=6&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; PocketPC/WinCE Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=3&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; PSP Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=21&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Playstation Vita Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=7&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; SymbianOS Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=20&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; WebOS Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=16&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Wii Port</span></a></li>
+																<li><a href="https://forums.scummvm.org/viewforum.php?f=4&amp;sid=fb8849aba22459478f3e254eaa1b73aa" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Other Ports</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="https://forums.scummvm.org/index.php?sid=fb8849aba22459478f3e254eaa1b73aa" data-navbar-reference="index" title="Board index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="responsive-menu hidden rightside dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="https://forums.scummvm.org/ucp.php?mode=delete_cookies&amp;sid=fb8849aba22459478f3e254eaa1b73aa" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+														</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="https://forums.scummvm.org/viewtopic.php?t=2397#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="https://forums.scummvm.org/viewtopic.php?t=2397#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	</div>
+
+<script type="text/javascript" async="" defer="" src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/piwik.js"></script><script type="text/javascript" src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/core.js"></script>
+
+	<script src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/cookieconsent.min.js"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more",
+					"href": "http\u003A\/\/cookiesandyou.com"
+				}
+			})});
+	</script>
+
+<!-- Matomo -->
+	<script type="text/javascript">
+		var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)cookieconsent_status\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+		//if (cookieValue == "dismiss") {
+			var _paq = _paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="https://analytics.scummvm.org/";
+				_paq.push(['setTrackerUrl', u+'piwik.php']);
+				_paq.push(['setSiteId', '2']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+			})();
+		//}	
+	</script>
+<!-- End Matomo Code -->
+
+<script type="text/javascript">
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+	
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/forum_fn.js"></script>
+<script src="./OT_ I got AESOP_32 engine compiler_manuals from John Miles - ScummVM __ Forums_files/ajax.js"></script>
+
+
+
+
+
+</body></html>

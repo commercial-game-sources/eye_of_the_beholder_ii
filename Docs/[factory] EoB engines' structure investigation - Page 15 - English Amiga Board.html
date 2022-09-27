@@ -1,0 +1,4859 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0051)http://eab.abime.net/showthread.php?t=24436&page=15 -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+<meta name="generator" content="vBulletin 3.8.11">
+
+<meta name="keywords" content=" [factory] EoB engines&#39; structure investigation, amiga,forum,discussion,bulletin board">
+<meta name="description" content="Page 15- [factory] EoB engines&#39; structure investigation project.Amiga Game Factory">
+
+
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.8.11 CSS
+* Style: 'EAB3 skin'; Style ID: 1
+*/
+body
+{
+	background: #0B0A3D url(gfx/logoback.gif) repeat-x;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 0px 10px 10px 10px;
+}
+a:link, body_alink
+{
+	color: #22229C;
+}
+a:visited, body_avisited
+{
+	color: #22229C;
+}
+a:hover, a:active, body_ahover
+{
+	color: #FF4400;
+}
+.page
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #D1D1E1;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.tcat
+{
+	background: #869BBF url(images/gradients/gradient_tcat.gif) repeat-x top left;
+	color: #FFFFFF;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #FFFF66;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #5C7099 url(images/gradients/gradient_thead.gif) repeat-x top left;
+	color: #FFFFFF;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link, .thead_alink
+{
+	color: #FFFFFF;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #FFFFFF;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #FFFF00;
+}
+.tfoot
+{
+	background: #3E5C92;
+	color: #E0E0F6;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #E0E0F6;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #E0E0F6;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #FFFF66;
+}
+.alt1, .alt1Active
+{
+	background: #F5F5FF;
+	color: #000000;
+}
+.alt2, .alt2Active
+{
+	background: #E1E4F2;
+	color: #000000;
+}
+.inlinemod
+{
+	background: #FFFFCC;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #F5F5FF;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 5px 10px 10px 10px;
+	padding: 0px;
+}
+.wysiwyg a:link, .wysiwyg_alink
+{
+	color: #22229C;
+}
+.wysiwyg a:visited, .wysiwyg_avisited
+{
+	color: #22229C;
+}
+.wysiwyg a:hover, .wysiwyg a:active, .wysiwyg_ahover
+{
+	color: #FF4400;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.bginput option, .bginput optgroup
+{
+	font-size: 10pt;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #666686;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #3E5C92;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #E4E7F5 url(images/gradients/gradient_panel.gif) repeat-x top left;
+	color: #000000;
+	padding: 10px;
+	border: 2px outset;
+}
+.panelsurround
+{
+	background: #D1D4E0 url(images/gradients/gradient_panelsurround.gif) repeat-x top left;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #738FBF;
+	color: #FFFFFF;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding: 3px 6px 3px 6px;
+	white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.vbmenu_option
+{
+	background: #BBC7CE;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #22229C;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #22229C;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite
+{
+	background: #8A949E;
+	color: #FFFFFF;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, th.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** de-emphasized text */
+.shade, a.shade:link, a.shade:visited { color: #777777; text-decoration: none; }
+a.shade:active, a.shade:hover { color: #FF4400; text-decoration: underline; }
+.tcat .shade, .thead .shade, .tfoot .shade { color: #DDDDDD; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+.zoneinfo {font-family: Arial; font-size: 10px; color: #222266;}
+.zonecrc32 {font-family: "Lucida Console","Courier New"; font-size: 10px; color: #888888;}
+.fixedsig {
+max-height:100px;
+_height: expression(this.scrollHeight > 100? "100px" : "auto" );
+overflow:hidden;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/vbulletin_important.css">
+
+
+<!-- / CSS Stylesheet -->
+
+<script src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/osd.js"></script><script async="" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/analytics(1).js"></script><script src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/f(22).txt" id="google_shimpl"></script><script type="text/javascript" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/connection-min.js"></script>
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+<script type="text/javascript" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/vbulletin_global.js"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="English Amiga Board RSS Feed" href="http://eab.abime.net/external.php?type=RSS2">
+	
+		<link rel="alternate" type="application/rss+xml" title="English Amiga Board - project.Amiga Game Factory - RSS Feed" href="http://eab.abime.net/external.php?type=RSS2&amp;forumids=69">
+	
+
+
+<!-- RCK -->
+<link rel="Shortcut Icon" href="http://eab.abime.net/favicon.ico" type="image/x-icon">
+<!-- /RCK -->
+	<title> [factory] EoB engines' structure investigation - Page 15 - English Amiga Board</title>
+	<script type="text/javascript" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/vbulletin_post_loader.js"></script>
+	<style type="text/css" id="vbulletin_showthread_css">
+	<!--
+	
+	#links div { white-space: nowrap; }
+	#links img { vertical-align: middle; }
+	-->
+	</style>
+	
+		<script async="" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/f(23).txt"></script>
+	
+	
+<link rel="preload" href="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/f(24).txt" as="script"><script type="text/javascript" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/f(24).txt"></script><link rel="preload" href="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/f(25).txt" as="script"><script type="text/javascript" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/f(25).txt"></script><style></style></head>
+<body onload=""><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-edgeless cc-bottom cc-color-override--632629233 cc-invisible" style="display: none;"><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">This website uses cookies to improve user experience and display correct advertisement. <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="http://cookiesandyou.com/" target="_blank">Learn more</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">Got it!</a></div><!--googleon: all--></div>
+<!-- logo -->
+<a name="top"></a>
+
+<table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+<tbody><tr>
+	<td align="left" width="309" height="60"><a href="http://eab.abime.net/index.php"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/eab.gif" border="0" alt="English Amiga Board" title="English Amiga Board"></a></td>
+
+<!-- RCK : IRC -->
+
+	<td align="center" width="100%">
+		<script>document.write("<script type='text/javascript' src='/gfx/abime.net.js?t=" + Date.now() + "'><\/script>");</script><script type="text/javascript" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/abime.net.js"></script><table border="0" cellspacing="1" cellpadding="0" bgcolor="#2e445b"> <tbody><tr>  <td bgcolor="#4c7394" align="center" valign="top" title="People on #abime.net - Updated Sun May 17 10:51:10 2020" nowrap="">   <a href="https://embed.mibbit.com/?server=irc.abime.net:6667&amp;channel=%23abime.net" target="_blank"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/livebox.jpg" border="0" width="56" height="30"></a><br>   <font face="verdana" size="1" color="#dddddd">    32 <font color="#dddddd">users</font>   </font>  </td>  <td bgcolor="#dfdfdf" align="left">  <div style="height: 50px; overflow: auto">   <font face="verdana" size="1" color="#333366">    <span>+Genju</span>    <span>+RussellB</span>    <span>+SceneCAT</span>    <span>_omega_</span>    <span>Actarus</span>    <span>alk</span>    <span>AmigaBits</span>    <span>balrog</span>    <span>Blumenkraft</span>    <span>demolition</span>    <span>e3ef13f4ff44</span>    <span>fubsan</span>    <span>furan</span>    <span>geheimnis`</span>    <span>Haohmaru</span>    <span>j0rd</span>    <span>johannes</span>    <span>Jope</span>    <span>Kuukunen</span>    <span>LineOf7s</span>    <span>Maylay</span>    <span>neoman</span>    <span>olspookishmagus</span>    <span>outofsorts</span>    <span>prank</span>    <span>Sibbi</span>    <span>telmnstr</span>    <span>tohtoris</span>    <span>trn</span>    <span>Tsume</span>    <span>Tunes</span>    <span>xenoclast</span>   </font>  </div>  </td> </tr></tbody></table>
+	</td>
+<!--
+	<td align="center">
+		<img src="/gfx/snowman.gif" border="0" title="I'm there ! Wahahahahaha">
+	</td>
+-->
+	<!-- <td align="left" width="73"><a href="http://www.abime.net/" target="_blank"><img src="/gfx/amigalore.png" border="0" width="73" height="60" alt="Amiga Lore" /></a></td> -->
+
+
+<!-- /RCK -->
+<!-- RCK : HOL search box -->
+    <td align="right"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr>
+<td align="right" width="253"><table border="0" cellpadding="0" cellspacing="0" height="60" width="253"><tbody><tr><form name="HOL" action="http://hol.abime.net/hol_search.php" method="get" target="_blank"></form><td height="60" width="120"><a href="http://hol.abime.net/" target="_blank" title="Amiga Database"><img height="60" width="120" border="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/hol_left.jpg"></a></td><td height="60" width="121" background="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/hol_back.jpg" valign="bottom" align="center"><input type="text" name="find" size="19" maxlength="256" style="FONT-FAMILY: Verdana;FONT-SIZE: 10px;WIDTH: 105px;BACKGROUND-COLOR: lightsteelblue"><br><input type="image" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/hol_search.jpg" width="100" height="35" border="0" alt="amiga game search"></td><td height="60" width="12"><img height="60" width="12" border="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/hol_right.jpg"></td></tr></tbody></table></td></tr></tbody></table></td>
+<!-- /RCK -->
+</tr>
+</tbody></table>
+<!-- /logo -->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+
+
+
+	<!-- RCK : European Law -->
+	<link rel="stylesheet" type="text/css" href="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/cookieconsent.min.css">
+	<script src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/cookieconsent.min.js"></script>
+	<script>
+	window.addEventListener("load", function(){
+	window.cookieconsent.initialise({
+	  "palette": {
+	    "popup": {
+	      "background": "#0b0a3d"
+	    },
+	    "button": {
+	      "background": "#d2d5e1"
+	    }
+	  },
+	  "theme": "edgeless",
+	  "content": {
+	    "message": "This website uses cookies to improve user experience and display correct advertisement."
+	  }
+	})});
+	</script>
+	<!-- /RCK -->
+
+
+
+
+
+
+<br>
+
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tbody><tr>
+	<td class="alt1" width="100%">
+		
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tbody><tr valign="bottom">
+				<td><a href="http://eab.abime.net/showthread.php?t=24436&amp;page=15#" onclick="history.back(1); return false;"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/navbits_start.gif" alt="Go Back" border="0" title="Go Back"></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a href="http://eab.abime.net/index.php" accesskey="1">English Amiga Board</a></span> 
+	<span class="navbar">&gt; <a href="http://eab.abime.net/forumdisplay.php?f=46">Other Projects</a></span>
+
+
+	<span class="navbar">&gt; <a href="http://eab.abime.net/forumdisplay.php?f=69">project.Amiga Game Factory</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size:10pt; padding-top:1px" colspan="3"><a href="http://eab.abime.net/showthread.php?t=24436&amp;page=15"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/navbits_finallink_ltr.gif" alt="Reload this Page" border="0" title="Reload this Page"></a> <strong>
+	 [factory] EoB engines' structure investigation
+
+</strong></td>
+			</tr>
+			</tbody></table>
+		
+	</td>
+
+	<td class="alt2" nowrap="nowrap" style="padding:0px">
+		<!-- login form -->
+		<form action="http://eab.abime.net/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/vbulletin_md5.js"></script>
+		<table cellpadding="0" cellspacing="3" border="0">
+		<tbody><tr>
+			<td class="smallfont" style="white-space: nowrap;"><label for="navbar_username">User Name</label></td>
+			<td><input type="text" class="bginput" style="font-size: 11px" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" onfocus="if (this.value == &#39;User Name&#39;) this.value = &#39;&#39;;"></td>
+			<td class="smallfont" nowrap="nowrap"><label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c">Remember Me?</label></td>
+		</tr>
+		<tr>
+			<td class="smallfont"><label for="navbar_password">Password</label></td>
+			<td><input type="password" class="bginput" style="font-size: 11px" name="vb_login_password" id="navbar_password" size="10" tabindex="102"></td>
+			<td><input type="submit" class="button" value="Log in" tabindex="104" title="Enter your username and password in the boxes provided to login, or click the &#39;register&#39; button to create a profile for yourself." accesskey="s"></td>
+		</tr>
+		</tbody></table>
+		<input type="hidden" name="s" value="">
+		<input type="hidden" name="securitytoken" value="guest">
+		<input type="hidden" name="do" value="login">
+		<input type="hidden" name="vb_login_md5password">
+		<input type="hidden" name="vb_login_md5password_utf">
+		</form>
+		<!-- / login form -->
+	</td>
+
+</tr>
+</tbody></table>
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div class="tborder" style="padding:1px; border-top-width:0px">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tbody><tr align="center">
+		
+		
+			<td class="vbmenu_control"><a href="http://eab.abime.net/register.php" rel="nofollow">Register</a></td>
+		
+		
+<!-- RCK : link to Wiki and Paypal -->
+<td class="vbmenu_control"><a href="http://wiki.abime.net/" target="_blank">Amiga FAQ</a></td>
+<td class="vbmenu_control"><a href="http://eab.abime.net/faq.php" accesskey="5">Rules &amp; Help</a></td>
+<!-- /RCK -->
+<!-- RCK : removed
+		<td class="vbmenu_control"><a rel="help" href="faq.php" accesskey="5">FAQ</a></td>
+-->
+		
+			
+				<td class="vbmenu_control"><a href="http://eab.abime.net/memberlist.php">Members List</a>
+			<!-- RCK : link to forum leaders -->
+			&nbsp;/&nbsp;
+			<a href="http://eab.abime.net/showgroups.php">Moderators List</a>
+			<!-- /RCK -->
+
+</td>
+			
+			
+		
+<!-- RCK : removed
+		<td class="vbmenu_control"><a href="calendar.php">Calendar</a></td>
+-->
+		
+			
+				
+				
+				<td class="vbmenu_control"><a href="http://eab.abime.net/search.php?do=getdaily" accesskey="2">Today's Posts</a></td>
+				
+			
+			<td class="vbmenu_control"><a href="http://eab.abime.net/forumdisplay.php?do=markread&amp;markreadhash=guest" rel="nofollow">Mark Forums Read</a></td>
+			
+		
+		
+		
+		</tr>
+	</tbody></table>
+</div>
+<!-- / nav buttons bar -->
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:3px">
+<tbody><tr valign="bottom">
+	
+		<td class="smallfont">&nbsp;</td>
+	
+	<td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellpadding="3" cellspacing="1" border="0">
+<tbody><tr>
+	<td class="vbmenu_control" style="font-weight:normal">Page 15 of 23</td>
+	<td class="alt1" nowrap="nowrap"><a rel="start" class="smallfont" href="http://eab.abime.net/showthread.php?t=24436" title="First Page - Results 1 to 20 of 456"><strong>«</strong> First</a></td>
+	<td class="alt1"><a rel="prev" class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=14" title="Prev Page - Results 261 to 280 of 456">&lt;</a></td>
+	<td class="alt1"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=5" title="Show results 81 to 100 of 456"><!---10-->5</a></td><td class="alt1"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=13" title="Show results 241 to 260 of 456">13</a></td><td class="alt1"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=14" title="Show results 261 to 280 of 456">14</a></td>	<td class="alt2"><span class="smallfont" title="Showing results 281 to 300 of 456"><strong>15</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=16" title="Show results 301 to 320 of 456">16</a></td><td class="alt1"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=17" title="Show results 321 to 340 of 456">17</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=16" title="Next Page - Results 301 to 320 of 456">&gt;</a></td>
+	<td class="alt1" nowrap="nowrap"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=23" title="Last Page - Results 441 to 456 of 456">Last <strong>»</strong></a></td>
+	
+</tr>
+</tbody></table>
+</div></td>
+</tr>
+</tbody></table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tbody><tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<td class="vbmenu_control" id="threadtools" nowrap="nowrap">
+		<a href="http://eab.abime.net/showthread.php?t=24436&amp;page=15&amp;nojs=1#goto_threadtools">Thread Tools</a>
+		
+	</td>
+	
+	
+	
+
+	
+
+</tr>
+</tbody></table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts"><!-- post #287772 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit287772" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-google-query-id="CJXAsdvCuukCFYvR3god_kUJtw" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post287772" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post287772"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			14 December 2006, 15:15
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=287772&amp;postcount=281" target="new" rel="nofollow" id="postcount287772" name="281"><strong>281</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_287772">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=8174">mirekluza</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_287772", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Nov 2006</div>
+				<div>Location: Czech republic</div>
+				
+				<div>
+					Posts: 15
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_287772" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_287772">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>JackAsser</strong>
+					
+				</div>
+				<div style="font-style:italic">Ok, new bmpdepacker uploaded. Same URL as before. It now supports all the test files you have posted. As far as I can see there are no unknown bytes left.</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>I implemented the bitmap conversion (EOB 3 &gt; AESOP/32) in <b>DAESOP 0.70</b> <a href="http://vogons.zetafleet.com/viewtopic.php?p=96111#96111" target="_blank">http://vogons.zetafleet.com/viewtopic.php?p=96111#96111</a>.<br>
+This enables to convert the "Eye of Beholder 3" to the AESOP/32 engine and the game is partially playable using the EXEs we got from John Miles (I did not build a proper runtime from the provided sources yet - I will bother with this after having the conversions done).<br>
+The game runs, the graphic is ok, but the texts are missing (I think the fonts need conversion as well) - therefore I say "partially playable".<br>
+ <br>
+Mirek
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="mirekluza is offline" border="0" title="mirekluza is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 287772 popup menu -->
+<div class="vbmenu_popup" id="postmenu_287772_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">mirekluza</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=8174">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=8174" rel="nofollow">Find More Posts by mirekluza</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 287772 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #287772 --><!-- post #288018 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit288018" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CLamstvCuukCFa4h0wodGV8Ncw" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post288018" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post288018"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			15 December 2006, 14:34
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=288018&amp;postcount=282" target="new" rel="nofollow" id="postcount288018" name="282"><strong>282</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_288018">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=7214">JackAsser</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_288018", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Jul 2006</div>
+				<div>Location: Lund / Sweden</div>
+				<div>Age: 41</div>
+				<div>
+					Posts: 171
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_288018" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_288018">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>mirekluza</strong>
+					
+				</div>
+				<div style="font-style:italic">I implemented the bitmap conversion (EOB 3 &gt; AESOP/32) in <b>DAESOP 0.70</b> <a href="http://vogons.zetafleet.com/viewtopic.php?p=96111#96111" target="_blank">http://vogons.zetafleet.com/viewtopic.php?p=96111#96111</a>.<br>
+This enables to convert the "Eye of Beholder 3" to the AESOP/32 engine and the game is partially playable using the EXEs we got from John Miles (I did not build a proper runtime from the provided sources yet - I will bother with this after having the conversions done).<br>
+The game runs, the graphic is ok, but the texts are missing (I think the fonts need conversion as well) - therefore I say "partially playable".<br>
+ <br>
+Mirek</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>Good work man!<br>
+<br>
+I'm currently in the process of converting the Eob-I fonts to a C64-suitable format. This is however trivial...
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="JackAsser is offline" border="0" title="JackAsser is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 288018 popup menu -->
+<div class="vbmenu_popup" id="postmenu_288018_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">JackAsser</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=7214">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=7214" rel="nofollow">Find More Posts by JackAsser</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 288018 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #288018 --><!-- post #288029 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit288029" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(2).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!3" data-google-query-id="CIaxstvCuukCFQ4C0wodMaEH0w" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post288029" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post288029"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			15 December 2006, 15:22
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=288029&amp;postcount=283" target="new" rel="nofollow" id="postcount288029" name="283"><strong>283</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_288029">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=3731"><font color="#00744C">CFOU!</font></a>
+				<script type="text/javascript"> vbmenu_register("postmenu_288029", true); </script>
+				
+			</div>
+
+			<div class="smallfont"><font color="#00744C">Moderator</font></div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+				<div class="smallfont">
+				<a href="http://eab.abime.net/member.php?u=3731"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/avatar3731_4.gif" width="80" height="60" alt="CFOU!&#39;s Avatar" border="0" title="CFOU!&#39;s Avatar"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Sep 2004</div>
+				<div>Location: France</div>
+				<div>Age: 47</div>
+				<div>
+					Posts: 2,801
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_288029" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_288029">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>mirekluza</strong>
+					
+				</div>
+				<div style="font-style:italic">I implemented the bitmap conversion (EOB 3 &gt; AESOP/32) in <b>DAESOP 0.70</b> <a href="http://vogons.zetafleet.com/viewtopic.php?p=96111#96111" target="_blank">http://vogons.zetafleet.com/viewtopic.php?p=96111#96111</a>.<br>
+This enables to convert the "Eye of Beholder 3" to the AESOP/32 engine and the game is partially playable using the EXEs we got from John Miles (I did not build a proper runtime from the provided sources yet - I will bother with this after having the conversions done).<br>
+The game runs, the graphic is ok, but the texts are missing (I think the fonts need conversion as well) - therefore I say "partially playable".<br>
+ <br>
+Mirek</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>indeed great work<br>
+ <br>
+i'll be really interested by MAZ and Script structure info (for amiga conversion of EOB3)
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="CFOU! is offline" border="0" title="CFOU! is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 288029 popup menu -->
+<div class="vbmenu_popup" id="postmenu_288029_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">CFOU!</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=3731">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=3731" rel="nofollow">Find More Posts by CFOU!</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 288029 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #288029 --><!-- post #288111 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit288111" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(3).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!4" data-google-query-id="CIKRstvCuukCFTYD0wodLrMIhA" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post288111" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post288111"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			15 December 2006, 21:55
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=288111&amp;postcount=284" target="new" rel="nofollow" id="postcount288111" name="284"><strong>284</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_288111">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=8174">mirekluza</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_288111", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Nov 2006</div>
+				<div>Location: Czech republic</div>
+				
+				<div>
+					Posts: 15
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_288111" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_288111">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>CFOU!</strong>
+					
+				</div>
+				<div style="font-style:italic">indeed great work<br>
+ i'll be really interested by MAZ and Script structure info (for amiga conversion of EOB3)</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>If I understand you, you are interested in:<br>
+a) level maps<br>
+According to Darkstar (from REWiki) they are AESOP resources numbers 5 to 18.<br>
+See the part "Level files" in:<br>
+<a href="http://rewiki.regengedanken.de/wiki/EYE.RES" target="_blank">http://rewiki.regengedanken.de/wiki/EYE.RES</a><br>
+<br>
+b) game scripts<br>
+Well, the EOB 3 scripts are not available in source code (only in AESOP documentation there is the content of the script defining START object in the EOB 3 - but I guess it is not much use to you).<br>
+The best you can get is bytecode disassembler of scripts from DAESOP. But as any disassembler of a high level language it is not so easy to understand from it what the original program does... It is simpler than with normal assembler (there are symbolic names of runtime functions and imported/exported variables) but still not easy.<br>
+<br>
+So there are three possibilities:<br>
+1. Trying to understand the game mechanism by studying the disassembler (not easy)<br>
+2. Recreate the game according to how it behaves towards user (without studying how it works internally)<br>
+3. Porting the AESOP/32 engine to Amiga (as you know we have C sources for AESOP/32 from John Miles, though the game resources still need some conversions to run in it - I did graphic, but fonts, maybe sound, music must be done as well - I hope to get to it later).<br>
+<br>
+Mirek
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#D1D1E1; background-color:#D1D1E1">
+				<em>
+					
+						Last edited by mirekluza; 15 December 2006 at <span class="time">22:01</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="mirekluza is offline" border="0" title="mirekluza is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 288111 popup menu -->
+<div class="vbmenu_popup" id="postmenu_288111_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">mirekluza</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=8174">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=8174" rel="nofollow">Find More Posts by mirekluza</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 288111 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #288111 --><!-- post #288190 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit288190" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(4).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!5" data-google-query-id="CKnNsdvCuukCFYRi0wodX8kNIg" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post288190" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post288190"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			16 December 2006, 03:31
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=288190&amp;postcount=285" target="new" rel="nofollow" id="postcount288190" name="285"><strong>285</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_288190">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=3731"><font color="#00744C">CFOU!</font></a>
+				<script type="text/javascript"> vbmenu_register("postmenu_288190", true); </script>
+				
+			</div>
+
+			<div class="smallfont"><font color="#00744C">Moderator</font></div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+				<div class="smallfont">
+				<a href="http://eab.abime.net/member.php?u=3731"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/avatar3731_4.gif" width="80" height="60" alt="CFOU!&#39;s Avatar" border="0" title="CFOU!&#39;s Avatar"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Sep 2004</div>
+				<div>Location: France</div>
+				<div>Age: 47</div>
+				<div>
+					Posts: 2,801
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_288190" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_288190">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>mirekluza</strong>
+					
+				</div>
+				<div style="font-style:italic">If I understand you, you are interested in:<br>
+a) level maps<br>
+According to Darkstar (from REWiki) they are AESOP resources numbers 5 to 18.<br>
+See the part "Level files" in:<br>
+<a href="http://rewiki.regengedanken.de/wiki/EYE.RES" target="_blank">http://rewiki.regengedanken.de/wiki/EYE.RES</a><br>
+ <br>
+b) game scripts<br>
+Well, the EOB 3 scripts are not available in source code (only in AESOP documentation there is the content of the script defining START object in the EOB 3 - but I guess it is not much use to you).<br>
+The best you can get is bytecode disassembler of scripts from DAESOP. But as any disassembler of a high level language it is not so easy to understand from it what the original program does... It is simpler than with normal assembler (there are symbolic names of runtime functions and imported/exported variables) but still not easy.<br>
+ <br>
+So there are three possibilities:<br>
+1. Trying to understand the game mechanism by studying the disassembler (not easy)<br>
+2. Recreate the game according to how it behaves towards user (without studying how it works internally)<br>
+3. Porting the AESOP/32 engine to Amiga (as you know we have C sources for AESOP/32 from John Miles, though the game resources still need some conversions to run in it - I did graphic, but fonts, maybe sound, music must be done as well - I hope to get to it later).<br>
+ <br>
+Mirek</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>thanx for your help<br>
+ <br>
+i hesite between solution 1 &amp; 3<br>
+ <br>
+I am interesting to use EOB2 amiga engine but for that i must extract  EOB3 script and convert it in 'inf' format but work it's perhaps difficult (and also convert all gfx in CPS &amp; VCN etc...)<br>
+ <br>
+more easy way is to convert AESOP/32 on amiga, but i am not a C++ master (i code in 680xx asm)<br>
+ <br>
+but it's possible...
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="CFOU! is offline" border="0" title="CFOU! is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 288190 popup menu -->
+<div class="vbmenu_popup" id="postmenu_288190_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">CFOU!</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=3731">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=3731" rel="nofollow">Find More Posts by CFOU!</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 288190 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #288190 --><!-- post #289101 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit289101" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_5_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(5).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!6" data-google-query-id="CK2UrdLDuukCFW0D0wodI6oOWQ" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post289101" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post289101"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			20 December 2006, 09:23
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=289101&amp;postcount=286" target="new" rel="nofollow" id="postcount289101" name="286"><strong>286</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_289101">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=8174">mirekluza</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_289101", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Nov 2006</div>
+				<div>Location: Czech republic</div>
+				
+				<div>
+					Posts: 15
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_289101" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Daesop 0.75</strong>
+			</div>
+			<hr size="1" style="color:#D1D1E1; background-color:#D1D1E1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_289101">
+			
+			I added the font conversion to the <b>DAESOP 0.75</b>. This means that all texts in the "Eye of Beholder 3" are now show when it runs in AESOP/32. <br>
+You can download DAESOP 0.75 in the above mentioned thread on VOGONS.<br>
+ <br>
+Mirek
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="mirekluza is offline" border="0" title="mirekluza is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 289101 popup menu -->
+<div class="vbmenu_popup" id="postmenu_289101_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">mirekluza</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=8174">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=8174" rel="nofollow">Find More Posts by mirekluza</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 289101 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #289101 --><!-- post #289125 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit289125" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_6_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_6_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_6" name="aswift_6" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(6).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!7" data-google-query-id="COr9rdLDuukCFQvO3godYdsL4w" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post289125" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post289125"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			20 December 2006, 12:05
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=289125&amp;postcount=287" target="new" rel="nofollow" id="postcount289125" name="287"><strong>287</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_289125">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=3731"><font color="#00744C">CFOU!</font></a>
+				<script type="text/javascript"> vbmenu_register("postmenu_289125", true); </script>
+				
+			</div>
+
+			<div class="smallfont"><font color="#00744C">Moderator</font></div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+				<div class="smallfont">
+				<a href="http://eab.abime.net/member.php?u=3731"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/avatar3731_4.gif" width="80" height="60" alt="CFOU!&#39;s Avatar" border="0" title="CFOU!&#39;s Avatar"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Sep 2004</div>
+				<div>Location: France</div>
+				<div>Age: 47</div>
+				<div>
+					Posts: 2,801
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_289125" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_289125">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>mirekluza</strong>
+					
+				</div>
+				<div style="font-style:italic">I added the font conversion to the <b>DAESOP 0.75</b>. This means that all texts in the "Eye of Beholder 3" are now show when it runs in AESOP/32. <br>
+You can download DAESOP 0.75 in the above mentioned thread on VOGONS.<br>
+ <br>
+Mirek</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>great, i will try to found some times to test it during Xmax holidays <img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/smile.gif" border="0" alt="" title="Smile" class="inlineimg">
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="CFOU! is offline" border="0" title="CFOU! is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 289125 popup menu -->
+<div class="vbmenu_popup" id="postmenu_289125_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">CFOU!</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=3731">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=3731" rel="nofollow">Find More Posts by CFOU!</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 289125 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #289125 --><!-- post #289383 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit289383" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_7_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_7_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(7).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!8" data-google-query-id="CMGRsNLDuukCFWch0wodn6YCIg" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post289383" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post289383"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			21 December 2006, 13:48
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=289383&amp;postcount=288" target="new" rel="nofollow" id="postcount289383" name="288"><strong>288</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_289383">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=7214">JackAsser</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_289383", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Jul 2006</div>
+				<div>Location: Lund / Sweden</div>
+				<div>Age: 41</div>
+				<div>
+					Posts: 171
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_289383" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_289383">
+			
+			Merry christmas to all of you!<br>
+<br>
+During the holidays I'll stick my head down in the LZSS algorithms which I think the C64-version of EoB can benifit from.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="JackAsser is offline" border="0" title="JackAsser is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 289383 popup menu -->
+<div class="vbmenu_popup" id="postmenu_289383_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">JackAsser</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=7214">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=7214" rel="nofollow">Find More Posts by JackAsser</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 289383 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #289383 --><!-- post #289623 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit289623" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_8_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_8_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_8" name="aswift_8" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(8).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!9" data-google-query-id="CJKYsNLDuukCFU4D0wodDMgMJQ" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post289623" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post289623"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			22 December 2006, 14:51
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=289623&amp;postcount=289" target="new" rel="nofollow" id="postcount289623" name="289"><strong>289</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_289623">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=4030">dlfrsilver</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_289623", true); </script>
+				
+			</div>
+
+			<div class="smallfont">CaptainM68K-SPS France</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+				<div class="smallfont">
+				<a href="http://eab.abime.net/member.php?u=4030"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/avatar4030_1.gif" alt="dlfrsilver&#39;s Avatar" border="0" title="dlfrsilver&#39;s Avatar"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Dec 2004</div>
+				<div>Location: Melun nearby Paris/France</div>
+				<div>Age: 42</div>
+				<div>
+					Posts: 8,419
+				</div>
+				
+				
+				
+				
+				<div>  <a href="http://eab.abime.net/showthread.php?t=24436&amp;page=15#" onclick="imwindow(&#39;msn&#39;, &#39;4030&#39;, 400, 200); return false;"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/im_msn.gif" alt="Send a message via MSN to dlfrsilver" border="0" title="Send a message via MSN to dlfrsilver"></a>  </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_289623" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_289623">
+			
+			yes merry Xmas jackasser !! ^^
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="dlfrsilver is offline" border="0" title="dlfrsilver is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 289623 popup menu -->
+<div class="vbmenu_popup" id="postmenu_289623_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">dlfrsilver</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=4030">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=4030" rel="nofollow">Find More Posts by dlfrsilver</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 289623 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #289623 --><!-- post #289690 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit289690" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_9_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_9_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_9" name="aswift_9" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(9).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!a" data-google-query-id="CMSZstLDuukCFSMC0wod7fcE8g" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post289690" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post289690"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			22 December 2006, 22:13
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=289690&amp;postcount=290" target="new" rel="nofollow" id="postcount289690" name="290"><strong>290</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_289690">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=8174">mirekluza</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_289690", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Nov 2006</div>
+				<div>Location: Czech republic</div>
+				
+				<div>
+					Posts: 15
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_289690" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Merry Christmas</strong>
+			</div>
+			<hr size="1" style="color:#D1D1E1; background-color:#D1D1E1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_289690">
+			
+			Merry Christmas to all.<br>
+<br>
+If I get some time I will go on with AESOP/DAESOP (I would like to check why saving in the EOB 3 in the AESOP/32 crashes), though I guess my wife thinks I spent far too much time on it (and occasionaly asks what it brings :-)  ).<br>
+<br>
+Mirek
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="mirekluza is offline" border="0" title="mirekluza is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 289690 popup menu -->
+<div class="vbmenu_popup" id="postmenu_289690_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">mirekluza</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=8174">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=8174" rel="nofollow">Find More Posts by mirekluza</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 289690 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #289690 --><!-- post #290448 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit290448" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_10_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_10_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_10" name="aswift_10" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(10).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!b" data-google-query-id="CPWZtdLDuukCFQ4e0wodciEOeg" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post290448" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post290448"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			28 December 2006, 14:13
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=290448&amp;postcount=291" target="new" rel="nofollow" id="postcount290448" name="291"><strong>291</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_290448">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=8174">mirekluza</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_290448", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Nov 2006</div>
+				<div>Location: Czech republic</div>
+				
+				<div>
+					Posts: 15
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_290448" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>EOB 3 save/load bug in the AESOP/32 was fixed</strong>
+			</div>
+			<hr size="1" style="color:#D1D1E1; background-color:#D1D1E1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_290448">
+			
+			I found out how to fix the crashing bug when loading/saving when running the "Eye of Beholder 3" in the AESOP/32 (by changing 4 bytes in EYE.RES). Details are in the thread on VOGONS.<br>
+This makes the game playable in the AESOP/32 (though I played just a short time at the beginning of the game, so there may be problems later).<br>
+<br>
+Mirek
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="mirekluza is offline" border="0" title="mirekluza is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 290448 popup menu -->
+<div class="vbmenu_popup" id="postmenu_290448_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">mirekluza</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=8174">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=8174" rel="nofollow">Find More Posts by mirekluza</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 290448 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #290448 --><!-- post #290467 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit290467" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_11_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_11_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_11" name="aswift_11" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(11).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!c" data-google-query-id="CI36tdLDuukCFdIg0woddx8NdQ" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post290467" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post290467"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			28 December 2006, 17:42
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=290467&amp;postcount=292" target="new" rel="nofollow" id="postcount290467" name="292"><strong>292</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_290467">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=1269">Marcuz</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_290467", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Wurk???</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+				<div class="smallfont">
+				<a href="http://eab.abime.net/member.php?u=1269"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/avatar1269_18.gif" width="80" height="80" alt="Marcuz&#39;s Avatar" border="0" title="Marcuz&#39;s Avatar"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Jun 2002</div>
+				<div>Location: .</div>
+				<div>Age: 44</div>
+				<div>
+					Posts: 5,261
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_290467" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_290467">
+			
+			i'm a code illitterate, but wouldn't be better, for customization purposes to have an unified engine to the 3 games? for to add and extract graphics for instance? the same goes for Dungeon Hack etc...
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="Marcuz is offline" border="0" title="Marcuz is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 290467 popup menu -->
+<div class="vbmenu_popup" id="postmenu_290467_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">Marcuz</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=1269">View Public Profile</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://marcopedrana.blogspot.com/">Visit Marcuz's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=1269" rel="nofollow">Find More Posts by Marcuz</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 290467 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #290467 --><!-- post #290511 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit290511" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_12_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_12_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_12" name="aswift_12" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(12).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!d" data-google-query-id="CIfettLDuukCFQfX3godCPQCLA" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post290511" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post290511"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			28 December 2006, 19:21
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=290511&amp;postcount=293" target="new" rel="nofollow" id="postcount290511" name="293"><strong>293</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_290511">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=8174">mirekluza</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_290511", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Nov 2006</div>
+				<div>Location: Czech republic</div>
+				
+				<div>
+					Posts: 15
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_290511" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_290511">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>marco pedrana</strong>
+					
+				</div>
+				<div style="font-style:italic">i'm a code illitterate, but wouldn't be better, for customization purposes to have an unified engine to the 3 games? for to add and extract graphics for instance? the same goes for Dungeon Hack etc...</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>The EOB 1 and EOB 2 use a completely different engine than the EOB 3 and DH... They just look similar to the outside, inside they are different beasts.<br>
+<br>
+Mirek
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="mirekluza is offline" border="0" title="mirekluza is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 290511 popup menu -->
+<div class="vbmenu_popup" id="postmenu_290511_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">mirekluza</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=8174">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=8174" rel="nofollow">Find More Posts by mirekluza</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 290511 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #290511 --><!-- post #290586 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit290586" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_13_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_13_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_13" name="aswift_13" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(13).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!e" data-google-query-id="COiFudLDuukCFZDW3godyEQBPw" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post290586" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post290586"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			29 December 2006, 09:37
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=290586&amp;postcount=294" target="new" rel="nofollow" id="postcount290586" name="294"><strong>294</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_290586">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=7214">JackAsser</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_290586", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Jul 2006</div>
+				<div>Location: Lund / Sweden</div>
+				<div>Age: 41</div>
+				<div>
+					Posts: 171
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_290586" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_290586">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>mirekluza</strong>
+					
+				</div>
+				<div style="font-style:italic">The EOB 1 and EOB 2 use a completely different engine than the EOB 3 and DH... They just look similar to the outside, inside they are different beasts.<br>
+<br>
+Mirek</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>Although I'm sure the EOB 3 engine would be capable of running EOB 1 or EOB 2 if scripted property... It would however be rather tedious to port. <img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/biggrin.gif" border="0" alt="" title="Big Grin" class="inlineimg">
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="JackAsser is offline" border="0" title="JackAsser is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 290586 popup menu -->
+<div class="vbmenu_popup" id="postmenu_290586_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">JackAsser</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=7214">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=7214" rel="nofollow">Find More Posts by JackAsser</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 290586 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #290586 --><!-- post #290601 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit290601" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_14_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_14_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_14" name="aswift_14" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(14).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!f" data-google-query-id="CIO29tTDuukCFYIi0wodkb8Kww" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post290601" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post290601"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			29 December 2006, 11:16
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=290601&amp;postcount=295" target="new" rel="nofollow" id="postcount290601" name="295"><strong>295</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_290601">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=3731"><font color="#00744C">CFOU!</font></a>
+				<script type="text/javascript"> vbmenu_register("postmenu_290601", true); </script>
+				
+			</div>
+
+			<div class="smallfont"><font color="#00744C">Moderator</font></div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+				<div class="smallfont">
+				<a href="http://eab.abime.net/member.php?u=3731"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/avatar3731_4.gif" width="80" height="60" alt="CFOU!&#39;s Avatar" border="0" title="CFOU!&#39;s Avatar"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Sep 2004</div>
+				<div>Location: France</div>
+				<div>Age: 47</div>
+				<div>
+					Posts: 2,801
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_290601" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_290601">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>JackAsser</strong>
+					
+				</div>
+				<div style="font-style:italic">Although I'm sure the EOB 3 engine would be capable of running EOB 1 or EOB 2 if scripted property... It would however be rather tedious to port. <img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/biggrin.gif" border="0" alt="" title="Big Grin" class="inlineimg"></div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>and EOB2 would can play EOB3 if script can be converted &amp; VCN created <img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/wink.gif" border="0" alt="" title="Wink" class="inlineimg">
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="CFOU! is offline" border="0" title="CFOU! is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 290601 popup menu -->
+<div class="vbmenu_popup" id="postmenu_290601_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">CFOU!</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=3731">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=3731" rel="nofollow">Find More Posts by CFOU!</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 290601 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #290601 --><!-- post #290620 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit290620" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_15_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_15_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_15" name="aswift_15" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(15).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!g" data-google-query-id="CLqR-tTDuukCFYUX0wodwz8K0w" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post290620" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post290620"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			29 December 2006, 12:48
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=290620&amp;postcount=296" target="new" rel="nofollow" id="postcount290620" name="296"><strong>296</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_290620">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=1269">Marcuz</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_290620", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Wurk???</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+				<div class="smallfont">
+				<a href="http://eab.abime.net/member.php?u=1269"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/avatar1269_18.gif" width="80" height="80" alt="Marcuz&#39;s Avatar" border="0" title="Marcuz&#39;s Avatar"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Jun 2002</div>
+				<div>Location: .</div>
+				<div>Age: 44</div>
+				<div>
+					Posts: 5,261
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_290620" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_290620">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>CFOU!</strong>
+					
+				</div>
+				<div style="font-style:italic">and EOB2 would can play EOB3 if script can be converted &amp; VCN created <img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/wink.gif" border="0" alt="" title="Wink" class="inlineimg"></div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>that's what i meant <img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/smile.gif" border="0" alt="" title="Smile" class="inlineimg"> however, i see as gems each and every of your different projects, don't take me bad. it's just that my main goal would be the creation of a toolset for make up new EoB games, not just the AGA porting or localization, as for outstanding feats they are, they interest only limitedly the occasional users.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="Marcuz is offline" border="0" title="Marcuz is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 290620 popup menu -->
+<div class="vbmenu_popup" id="postmenu_290620_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">Marcuz</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=1269">View Public Profile</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://marcopedrana.blogspot.com/">Visit Marcuz's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=1269" rel="nofollow">Find More Posts by Marcuz</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 290620 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #290620 --><!-- post #291019 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit291019" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_16_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_16_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_16" name="aswift_16" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(16).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!h" data-google-query-id="CMfd-dTDuukCFcrB3god9nQEzQ" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post291019" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post291019"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			01 January 2007, 18:38
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=291019&amp;postcount=297" target="new" rel="nofollow" id="postcount291019" name="297"><strong>297</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_291019">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=7214">JackAsser</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_291019", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Jul 2006</div>
+				<div>Location: Lund / Sweden</div>
+				<div>Age: 41</div>
+				<div>
+					Posts: 171
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_291019" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Content rights</strong>
+			</div>
+			<hr size="1" style="color:#D1D1E1; background-color:#D1D1E1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_291019">
+			
+			I've been in contact with Joseph Hewitt, one of the original graphicians providing graphics to the EOB series etc, about content rights. It's a mess....<br>
+<br>
+To make a LONG story short:<br>
+<br>
+EOB was developed by Westwood Studios back when it was Westwood Associates before we became part of Virgin Games.  Electronic Arts bought Westwood and even though they closed the studio they still own the rights to all Westwood’s stuff.<br>
+<br>
+But none of that matter because it published by Strategic Simulations Inc<br>
+(SSI) which was bought out by Mindscape, became part of Mattel before finally ending up under Ubisoft.<br>
+<br>
+It was actually developed under the AD&amp;D license from TSR which was bought by Wizards of the Coast and is now owned by ummm Hasbro?<br>
+<br>
+Along those lines, as you might know Westwood redid Dune 2 as Dune 2000 and then a follow-up with the same new engine Dune Emperor. This was about the same time Sci-Fi was having some success with the new Dune mini-series. <br>
+<br>
+It was soon after that they said, "hey wait a minute! who are these guys publishing these Dune games?"  <br>
+<br>
+The original was done 10 years earlier under Virgin and now Westwood was owned by EA it seemed nobody bothered to do any legal follow-up to see if all the rights were in order and that is was okay to actually re-make Dune 2 and it's new sequel.  <br>
+<br>
+I have no idea how that story ends though as soon after my friend who was producer on those games left the industry and then Westwood was shut down.  But it took 2 years plus a revitalized mini-series before somebody noticed there were video games based on that license.<br>
+<br>
+So.... all in all I'll simply release my EOB-64 port in the Public Domain license since those big company dragons will never sort out who's really owns the EOB name. <img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/biggrin.gif" border="0" alt="" title="Big Grin" class="inlineimg"><br>
+<br>
+Joseph was also most helpful and gave me a ZIP archive containg all the original .IFF files used for the games. I have this ZIP at work and it's about 10Mb. Could someone fix so that I can upload it here to The Zone!.<br>
+<br>
+I asked Joseph about spreading this ZIP and his answer was: "What zip file? You found a zip file on the internet? I guess you can find anything if you look hard enough. I wonder where it came from. :-)".<br>
+<br>
+So. <img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/biggrin.gif" border="0" alt="" title="Big Grin" class="inlineimg"><br>
+<br>
+/Andreas
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="JackAsser is offline" border="0" title="JackAsser is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 291019 popup menu -->
+<div class="vbmenu_popup" id="postmenu_291019_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">JackAsser</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=7214">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=7214" rel="nofollow">Find More Posts by JackAsser</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 291019 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #291019 --><!-- post #291042 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit291042" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_17_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_17_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_17" name="aswift_17" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(17).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!i" data-google-query-id="CJPuotXDuukCFTYD0wodLrMIhA" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post291042" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post291042"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			01 January 2007, 20:51
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=291042&amp;postcount=298" target="new" rel="nofollow" id="postcount291042" name="298"><strong>298</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_291042">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=4030">dlfrsilver</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_291042", true); </script>
+				
+			</div>
+
+			<div class="smallfont">CaptainM68K-SPS France</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+				<div class="smallfont">
+				<a href="http://eab.abime.net/member.php?u=4030"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/avatar4030_1.gif" alt="dlfrsilver&#39;s Avatar" border="0" title="dlfrsilver&#39;s Avatar"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Dec 2004</div>
+				<div>Location: Melun nearby Paris/France</div>
+				<div>Age: 42</div>
+				<div>
+					Posts: 8,419
+				</div>
+				
+				
+				
+				
+				<div>  <a href="http://eab.abime.net/showthread.php?t=24436&amp;page=15#" onclick="imwindow(&#39;msn&#39;, &#39;4030&#39;, 400, 200); return false;"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/im_msn.gif" alt="Send a message via MSN to dlfrsilver" border="0" title="Send a message via MSN to dlfrsilver"></a>  </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_291042" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_291042">
+			
+			Looool !!! excellent !!!!
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="dlfrsilver is offline" border="0" title="dlfrsilver is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 291042 popup menu -->
+<div class="vbmenu_popup" id="postmenu_291042_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">dlfrsilver</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=4030">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=4030" rel="nofollow">Find More Posts by dlfrsilver</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 291042 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #291042 --><!-- post #291043 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit291043" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_18_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_18_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_18" name="aswift_18" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(18).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!j" data-google-query-id="CIPJpNXDuukCFcIh0wodxAEKQA" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post291043" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post291043"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			01 January 2007, 21:12
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=291043&amp;postcount=299" target="new" rel="nofollow" id="postcount291043" name="299"><strong>299</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_291043">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=1269">Marcuz</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_291043", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Wurk???</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+				<div class="smallfont">
+				<a href="http://eab.abime.net/member.php?u=1269"><img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/avatar1269_18.gif" width="80" height="80" alt="Marcuz&#39;s Avatar" border="0" title="Marcuz&#39;s Avatar"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Jun 2002</div>
+				<div>Location: .</div>
+				<div>Age: 44</div>
+				<div>
+					Posts: 5,261
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_291043" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_291043">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>JackAsser</strong>
+					
+				</div>
+				<div style="font-style:italic">Joseph was also most helpful and gave me a ZIP archive containg all the original .IFF files used for the games. I have this ZIP at work and it's about 10Mb. Could someone fix so that I can upload it here to The Zone!.</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>good job! about the size of a single uploadable file to the zone, only RCK can change the size allowed, and he's currently in vacation, but you can divide it in 2 parts, there is no little limit to the total amount of data in the zone <img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/smile.gif" border="0" alt="" title="Smile" class="inlineimg">
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="Marcuz is offline" border="0" title="Marcuz is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 291043 popup menu -->
+<div class="vbmenu_popup" id="postmenu_291043_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">Marcuz</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=1269">View Public Profile</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://marcopedrana.blogspot.com/">Visit Marcuz's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=1269" rel="nofollow">Find More Posts by Marcuz</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 291043 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #291043 --><!-- post #291054 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit291054" style="padding:0px 0px 6px 0px">
+	
+
+
+
+	<div align="center">
+		<!-- 728x90_g-thread_1/1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4594704610167017" data-ad-slot="2528804288" data-adsbygoogle-status="done"><ins id="aswift_19_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_19_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_19" name="aswift_19" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(19).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!k" data-google-query-id="COCTqNXDuukCFUnG3godTScETg" data-load-complete="true"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+
+
+<table id="post291054" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post291054"><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/post_old.gif" alt="Old" border="0" title="Old"></a>
+			01 January 2007, 22:17
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #D1D1E1; border-left: 0px" align="right">
+			&nbsp;
+			#<a href="http://eab.abime.net/showpost.php?p=291054&amp;postcount=300" target="new" rel="nofollow" id="postcount291054" name="300"><strong>300</strong></a>
+			
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #D1D1E1; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_291054">
+				
+				<a class="bigusername" href="http://eab.abime.net/member.php?u=7214">JackAsser</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_291054", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Registered User</div>
+			
+			
+			<!-- RCK: EAB Supporter ! -->
+			
+			
+			
+			<!-- /RCK -->
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Jul 2006</div>
+				<div>Location: Lund / Sweden</div>
+				<div>Age: 41</div>
+				<div>
+					Posts: 171
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_291054" style="border-right: 1px solid #D1D1E1">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_291054">
+			
+			<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>marco pedrana</strong>
+					
+				</div>
+				<div style="font-style:italic">good job! about the size of a single uploadable file to the zone, only RCK can change the size allowed, and he's currently in vacation, but you can divide it in 2 parts, there is no little limit to the total amount of data in the zone <img src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/smile.gif" border="0" alt="" title="Smile" class="inlineimg"></div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>I don't have access to upload to The Zone! it seems...
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		<!-- RCK: signature only for member -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #D1D1E1; border-top: 0px">
+		<img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/user_offline.gif" alt="JackAsser is offline" border="0" title="JackAsser is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #D1D1E1; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 291054 popup menu -->
+<div class="vbmenu_popup" id="postmenu_291054_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">JackAsser</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/member.php?u=7214">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://eab.abime.net/search.php?do=finduser&amp;u=7214" rel="nofollow">Find More Posts by JackAsser</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 291054 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #291054 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:-3px">
+<tbody><tr valign="top">
+	
+		<td class="smallfont">&nbsp;</td>
+	
+	
+		<td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellpadding="3" cellspacing="1" border="0">
+<tbody><tr>
+	<td class="vbmenu_control" style="font-weight:normal">Page 15 of 23</td>
+	<td class="alt1" nowrap="nowrap"><a rel="start" class="smallfont" href="http://eab.abime.net/showthread.php?t=24436" title="First Page - Results 1 to 20 of 456"><strong>«</strong> First</a></td>
+	<td class="alt1"><a rel="prev" class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=14" title="Prev Page - Results 261 to 280 of 456">&lt;</a></td>
+	<td class="alt1"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=5" title="Show results 81 to 100 of 456"><!---10-->5</a></td><td class="alt1"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=13" title="Show results 241 to 260 of 456">13</a></td><td class="alt1"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=14" title="Show results 261 to 280 of 456">14</a></td>	<td class="alt2"><span class="smallfont" title="Showing results 281 to 300 of 456"><strong>15</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=16" title="Show results 301 to 320 of 456">16</a></td><td class="alt1"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=17" title="Show results 321 to 340 of 456">17</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=16" title="Next Page - Results 301 to 320 of 456">&gt;</a></td>
+	<td class="alt1" nowrap="nowrap"><a class="smallfont" href="http://eab.abime.net/showthread.php?t=24436&amp;page=23" title="Last Page - Results 441 to 456 of 456">Last <strong>»</strong></a></td>
+	
+</tr>
+</tbody></table>
+</div>
+		
+		</td>
+	
+</tr>
+</tbody></table>
+<!-- / controls below postbits -->
+
+
+
+
+
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/vbulletin_lightbox.js"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+	<br>
+	<div class="smallfont" align="center">
+		<strong>«</strong>
+			<a href="http://eab.abime.net/showthread.php?t=24436&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+			|
+			<a href="http://eab.abime.net/showthread.php?t=24436&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+		<strong>»</strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+
+
+<!-- currently active users -->
+	<br>
+	<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+	<tbody><tr>
+		<td class="tcat" colspan="2">
+			Currently Active Users Viewing This Thread: 1 <span class="normal">(0 members and 1 guests)</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="alt1" colspan="2">
+			<span class="smallfont">&nbsp;</span>
+		</td>
+	</tr>
+	</tbody></table>
+<!-- end currently active users -->
+
+
+
+
+
+<!-- controls for non-popup browsers -->
+
+
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-top-width:0px">
+<tbody><tr>
+	<td class="thead" colspan="2">Thread Tools<a name="goto_threadtools"></a></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt1" colspan="2">
+
+	<!-- thread tools -->
+	<div class="smallfont">
+		
+
+			<div><img class="inlineimg" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/printer.gif" alt="Show Printable Version" vspace="1" title="Show Printable Version"> <a href="http://eab.abime.net/printthread.php?t=24436" rel="nofollow">Show Printable Version</a></div>
+                        
+		
+		
+		
+	</div>
+	<!-- / thread tools -->
+
+	</td>
+	
+</tr>
+
+</tbody></table>
+<br>
+
+
+<!-- / controls for non-popup browsers -->
+
+
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<thead>
+	<tr>
+		<td class="tcat" width="100%" colspan="5">
+			<a style="float:right" href="http://eab.abime.net/showthread.php?t=24436&amp;page=15#top" onclick="return toggle_collapse(&#39;similarthreads&#39;)"><img id="collapseimg_similarthreads" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/collapse_tcat.gif" alt="" border="0"></a>
+			Similar Threads<a name="similarthreads"></a>
+		</td>
+	</tr>
+</thead>
+<tbody id="collapseobj_similarthreads" style="">
+<tr class="thead" align="center">
+	<td class="thead" width="40%">Thread</td>
+	<td class="thead" width="15%" nowrap="nowrap">Thread Starter</td>
+	<td class="thead" width="20%">Forum</td>
+	<td class="thead" width="5%">Replies</td>
+	<td class="thead" width="20%">Last Post</td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="http://eab.abime.net/showthread.php?t=38913" title="Download here the current version of the game 
+- v1.09 AGA multilanguage on 22.12.2006 
+- v1.083 ECS multilanguage on 03.11.2006 
+ 
+This thread is intended as a milestone for future bugfixing and betatesting, being the old threads pretty garbled and in parts obsolete. 
+ 
+Please note 
+Since the game...">[Buglist] EoB 1 AGA - EoB 1 ECS Multilanguage</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">Marcuz</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">project.Amiga Game Factory</span></td>
+	<td class="alt2" align="center"><span class="smallfont">56</span></td>
+	<td class="alt1" align="right"><span class="smallfont">20 October 2019 <span class="time">13:17</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="http://eab.abime.net/showthread.php?t=69059" title="Hi Amiga freaks, :) 
+ 
+I would like to have an idea if you guys know of any old small games which had scripting engines, like for example, those little Windows 3.11/Windows 95 games, that allowed the author or even the user to script the actions of the characters of the game... 
+ 
+Small games...">Little games with script engines builtin</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">Leandro Jardim</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Retrogaming General Discussion</span></td>
+	<td class="alt2" align="center"><span class="smallfont">3</span></td>
+	<td class="alt1" align="right"><span class="smallfont">07 May 2013 <span class="time">17:36</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="http://eab.abime.net/showthread.php?t=53059" title="Does anyone know of a description of how games like Lotus, Jaguar, Outrun, etc. draw the road? I assume it&#39;s something along the lines of calculating the left and right edge of the road for each scanline and then do some filling, but what are the details? How is the hardware used, and how does the...">How do pseudo-3D racing game engines work?</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">absence</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Coders. General</span></td>
+	<td class="alt2" align="center"><span class="smallfont">2</span></td>
+	<td class="alt1" align="right"><span class="smallfont">29 May 2010 <span class="time">00:05</span></span></td>
+</tr>
+
+</tbody>
+</table>
+
+<br>
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr valign="bottom">
+	<td width="100%" valign="top">
+		<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="210">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float:right" href="http://eab.abime.net/showthread.php?t=24436&amp;page=15#top" onclick="return toggle_collapse(&#39;forumrules&#39;)"><img id="collapseimg_forumrules" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/collapse_thead.gif" alt="" border="0"></a>
+		Posting Rules
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may not</strong> post new threads</div>
+		<div>You <strong>may not</strong> post replies</div>
+		<div>You <strong>may not</strong> post attachments</div>
+		<div>You <strong>may not</strong> edit your posts</div>
+		<hr>
+		
+		<div><a href="http://eab.abime.net/misc.php?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></div>
+		<div><a href="http://eab.abime.net/misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a href="http://eab.abime.net/misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></div>
+		<div>HTML code is <strong>Off</strong></div>
+		<hr>
+		<div><a href="http://eab.abime.net/misc.php?do=showrules" target="_blank">Forum Rules</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tbody><tr>
+			<td>
+			<div class="smallfont" style="text-align:left; white-space:nowrap">
+	<form action="http://eab.abime.net/forumdisplay.php" method="get">
+	<input type="hidden" name="s" value="">
+	<input type="hidden" name="daysprune" value="">
+	<strong>Forum Jump</strong><br>
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Site Areas">
+			<option value="cp">User Control Panel</option>
+			<option value="pm">Private Messages</option>
+			<option value="subs">Subscriptions</option>
+			<option value="wol">Who's Online</option>
+			<option value="search">Search Forums</option>
+			<option value="home">Forums Home</option>
+		</optgroup>
+		
+		<optgroup label="Forums">
+		<option value="29" class="fjdpth0"> News</option>
+<option value="1" class="fjdpth0"> Main</option>
+<option value="2" class="fjdpth1">&nbsp; &nbsp;  Amiga scene</option>
+<option value="17" class="fjdpth1">&nbsp; &nbsp;  Retrogaming General Discussion</option>
+<option value="18" class="fjdpth1">&nbsp; &nbsp;  Nostalgia &amp; memories</option>
+<option value="4" class="fjdpth0"> Support</option>
+<option value="26" class="fjdpth1">&nbsp; &nbsp;  New to Emulation or Amiga scene</option>
+<option value="104" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Member Introductions</option>
+<option value="5" class="fjdpth1">&nbsp; &nbsp;  support.WinUAE</option>
+<option value="28" class="fjdpth1">&nbsp; &nbsp;  support.WinFellow</option>
+<option value="54" class="fjdpth1">&nbsp; &nbsp;  support.OtherUAE</option>
+<option value="122" class="fjdpth1">&nbsp; &nbsp;  support.FS-UAE</option>
+<option value="132" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  project.AmigaLive</option>
+<option value="20" class="fjdpth1">&nbsp; &nbsp;  support.Hardware</option>
+<option value="105" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Hardware mods</option>
+<option value="77" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Hardware pics</option>
+<option value="6" class="fjdpth1">&nbsp; &nbsp;  support.Games</option>
+<option value="7" class="fjdpth1">&nbsp; &nbsp;  support.Demos</option>
+<option value="8" class="fjdpth1">&nbsp; &nbsp;  support.Apps</option>
+<option value="109" class="fjdpth1">&nbsp; &nbsp;  support.Amiga Forever</option>
+<option value="125" class="fjdpth1">&nbsp; &nbsp;  support.Amix</option>
+<option value="74" class="fjdpth1">&nbsp; &nbsp;  support.Other</option>
+<option value="9" class="fjdpth0"> Requests</option>
+<option value="56" class="fjdpth1">&nbsp; &nbsp;  request.UAE Wishlist</option>
+<option value="10" class="fjdpth1">&nbsp; &nbsp;  request.Old Rare Games</option>
+<option value="11" class="fjdpth1">&nbsp; &nbsp;  request.Demos</option>
+<option value="12" class="fjdpth1">&nbsp; &nbsp;  request.Apps</option>
+<option value="13" class="fjdpth1">&nbsp; &nbsp;  request.Modules</option>
+<option value="106" class="fjdpth1">&nbsp; &nbsp;  request.Music</option>
+<option value="75" class="fjdpth1">&nbsp; &nbsp;  request.Other</option>
+<option value="21" class="fjdpth1">&nbsp; &nbsp;  Looking for a game name ?</option>
+<option value="22" class="fjdpth1">&nbsp; &nbsp;  Games images which need to be WHDified</option>
+<option value="19" class="fjdpth0"> abime.net - Hall Of Light</option>
+<option value="50" class="fjdpth1">&nbsp; &nbsp;  HOL news</option>
+<option value="41" class="fjdpth1">&nbsp; &nbsp;  HOL suggestions and feedback</option>
+<option value="43" class="fjdpth1">&nbsp; &nbsp;  HOL data problems</option>
+<option value="44" class="fjdpth1">&nbsp; &nbsp;  HOL contributions</option>
+<option value="80" class="fjdpth0"> abime.net - Amiga Magazine Rack</option>
+<option value="81" class="fjdpth1">&nbsp; &nbsp;  AMR news</option>
+<option value="82" class="fjdpth1">&nbsp; &nbsp;  AMR suggestions and feedback</option>
+<option value="83" class="fjdpth1">&nbsp; &nbsp;  AMR data problems</option>
+<option value="84" class="fjdpth1">&nbsp; &nbsp;  AMR contributions</option>
+<option value="27" class="fjdpth0"> abime.net - Home Projects</option>
+<option value="121" class="fjdpth1">&nbsp; &nbsp;  project.Amiga Lore</option>
+<option value="14" class="fjdpth1">&nbsp; &nbsp;  project.EAB</option>
+<option value="40" class="fjdpth1">&nbsp; &nbsp;  project.IRC</option>
+<option value="32" class="fjdpth1">&nbsp; &nbsp;  project.Mods Jukebox</option>
+<option value="79" class="fjdpth1">&nbsp; &nbsp;  project.Wiki</option>
+<option value="55" class="fjdpth0"> abime.net - Hosted Projects</option>
+<option value="53" class="fjdpth1">&nbsp; &nbsp;  project.aGTW</option>
+<option value="47" class="fjdpth1">&nbsp; &nbsp;  project.APoV</option>
+<option value="61" class="fjdpth1">&nbsp; &nbsp;  project.ClassicWB</option>
+<option value="24" class="fjdpth1">&nbsp; &nbsp;  project.Jambo!</option>
+<option value="59" class="fjdpth1">&nbsp; &nbsp;  project.Green Amiga Alien GUIDES</option>
+<option value="123" class="fjdpth1">&nbsp; &nbsp;  project.Maptapper</option>
+<option value="64" class="fjdpth1">&nbsp; &nbsp;  project.Sprites</option>
+<option value="39" class="fjdpth1">&nbsp; &nbsp;  project.WinUAE - Kaillera</option>
+<option value="46" class="fjdpth0"> Other Projects</option>
+<option value="57" class="fjdpth1">&nbsp; &nbsp;  project.Amiga Demo DVD</option>
+<option value="69" class="fjsel" selected="selected">&nbsp; &nbsp;  project.Amiga Game Factory</option>
+<option value="58" class="fjdpth1">&nbsp; &nbsp;  project.CARE</option>
+<option value="108" class="fjdpth1">&nbsp; &nbsp;  project.EAB File Server</option>
+<option value="127" class="fjdpth1">&nbsp; &nbsp;  project.CD32 Conversion</option>
+<option value="87" class="fjdpth1">&nbsp; &nbsp;  project.Game Cover Art</option>
+<option value="88" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  GCA.Feedback and Suggestions</option>
+<option value="89" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  GCA.Work in Progress</option>
+<option value="90" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  GCA.Cover Requests</option>
+<option value="91" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  GCA.Usefull Programs</option>
+<option value="92" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  GCA.Helpdesk</option>
+<option value="103" class="fjdpth1">&nbsp; &nbsp;  project.KGLoad</option>
+<option value="76" class="fjdpth1">&nbsp; &nbsp;  project.MAGE</option>
+<option value="110" class="fjdpth1">&nbsp; &nbsp;  project.Missing Full Shareware Games</option>
+<option value="45" class="fjdpth1">&nbsp; &nbsp;  project.SPS (was CAPS)</option>
+<option value="33" class="fjdpth1">&nbsp; &nbsp;  project.TOSEC (amiga only)</option>
+<option value="63" class="fjdpth1">&nbsp; &nbsp;  project.WHDLoad</option>
+<option value="94" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  project.Killergorilla's WHD packs</option>
+<option value="16" class="fjdpth0"> Misc</option>
+<option value="15" class="fjdpth1">&nbsp; &nbsp;  Amiga websites reviews</option>
+<option value="25" class="fjdpth1">&nbsp; &nbsp;  MarketPlace</option>
+<option value="78" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Swapshop</option>
+<option value="128" class="fjdpth1">&nbsp; &nbsp;  Kinky Amiga Stuff</option>
+<option value="129" class="fjdpth1">&nbsp; &nbsp;  Collections</option>
+<option value="85" class="fjdpth1">&nbsp; &nbsp;  EAB's competition</option>
+<option value="116" class="fjdpth0"> Coders</option>
+<option value="37" class="fjdpth1">&nbsp; &nbsp;  Coders. General</option>
+<option value="115" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Coders. Releases</option>
+<option value="73" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Coders. Tutorials</option>
+<option value="112" class="fjdpth1">&nbsp; &nbsp;  Coders. Asm / Hardware</option>
+<option value="113" class="fjdpth1">&nbsp; &nbsp;  Coders. System</option>
+<option value="117" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Coders. Scripting</option>
+<option value="120" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Coders. Nextgen</option>
+<option value="114" class="fjdpth1">&nbsp; &nbsp;  Coders. Language</option>
+<option value="118" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Coders. C/C++</option>
+<option value="119" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Coders. AMOS</option>
+<option value="126" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Coders. Blitz Basic</option>
+<option value="130" class="fjdpth1">&nbsp; &nbsp;  Coders. Contest</option>
+<option value="131" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Coders. Entries</option>
+<option value="133" class="fjdpth0"> Creation</option>
+<option value="140" class="fjdpth1">&nbsp; &nbsp;  Graphics</option>
+<option value="134" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Graphics. Work In Progress</option>
+<option value="135" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Graphics. Finished Work</option>
+<option value="136" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Graphics. Tutorials</option>
+<option value="141" class="fjdpth1">&nbsp; &nbsp;  Music</option>
+<option value="137" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Music. Work In Progress</option>
+<option value="138" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Music. Finished Work</option>
+<option value="139" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Music. Tutorials</option>
+<option value="23" class="fjdpth0"> Off Topic</option>
+<option value="95" class="fjdpth1">&nbsp; &nbsp;  OT - General</option>
+<option value="96" class="fjdpth1">&nbsp; &nbsp;  OT - Entertainment</option>
+<option value="97" class="fjdpth1">&nbsp; &nbsp;  OT - Sports</option>
+<option value="99" class="fjdpth1">&nbsp; &nbsp;  OT - Technical</option>
+<option value="98" class="fjdpth1">&nbsp; &nbsp;  OT - Gaming</option>
+
+		</optgroup>
+		
+	</select><input type="submit" class="button" value="Go">
+	</form>
+</div>
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+<!-- /forum rules and admin links -->
+
+<br>
+
+
+
+<br>
+<div class="smallfont" align="center">All times are GMT +2. The time now is <span class="time">10:52</span>.</div>
+<br>
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+
+<form action="http://eab.abime.net/index.php" method="get" style="clear:left">
+
+<table cellpadding="6" cellspacing="0" border="0" width="100%" class="page" align="center">
+<tbody><tr>
+	
+		<td class="tfoot">
+			<select name="styleid" onchange="switch_id(this, &#39;style&#39;)">
+				<optgroup label="Quick Style Chooser">
+					<option value="1" class="" selected="selected">-- EAB3 skin</option>
+<option value="3" class="">---- EAB2 skin</option>
+<option value="4" class="">---- Mobile skin</option>
+
+				</optgroup>
+			</select>
+		</td>
+	
+	
+	<td class="tfoot" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				
+				
+				<!-- RCK: add target_blank to CP -->
+				
+				
+				<a href="http://eab.abime.net/archive/index.php">Archive</a> -
+				
+				
+				
+				<a href="http://eab.abime.net/showthread.php?t=24436&amp;page=15#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</tbody></table>
+
+<br>
+<!-- RCK : add a color --> 
+<font color="#cccccc"> 
+<!-- /RCK --> 
+
+<div align="center">
+	<div class="smallfont" align="center">
+	<!-- Do not remove this copyright notice -->
+	Powered by vBulletin® Version 3.8.11<br>Copyright ©2000 - 2020, vBulletin Solutions Inc.
+	<!-- Do not remove this copyright notice -->
+	</div>
+
+	<div class="smallfont" align="center">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+
+	
+	</div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44464984-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script type="text/javascript" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/awstats_misc_tracker.js"></script>
+<noscript><p><img src="/awjs/awstats_misc_tracker.js?nojs=y" alt="" height="0" width="0" style="display: none" /></p></noscript>
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+<center><span class="smallfont">Page generated in <b>0.10012</b> seconds with <b>13</b> queries</span></center>
+</font></form><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_20_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_20_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_20" name="aswift_20" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/ads(20).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!k" data-load-complete="true"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_3631875417519" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/saved_resource(14).html"></iframe></body><iframe id="google_esf" name="google_esf" src="./[factory] EoB engines&#39; structure investigation - Page 15 - English Amiga Board_files/zrt_lookup.html" data-ad-client="ca-pub-4594704610167017" style="display: none;"></iframe></html>

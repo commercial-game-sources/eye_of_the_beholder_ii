@@ -1,0 +1,21 @@
+
+var ftGUID_4621067="4494DBC6EFB93C";
+var ftConfID_4621067="0";
+var ftParams_4621067="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_ifb=1&ft_domain=eab.abime.net&ft_agentEnv=0&ft_referrer=http%3A%2F%2Feab.abime.net%2Fshowthread.php%3Ft%3D24436%26page%3D15&cachebuster=719432.297242139";
+var ftKeyword_4621067="";
+var ftCustom_4621067="";
+var ftSection_4621067="";
+var ftSegment_4621067="acfv,um2,w8t";
+var ftSegmentList_4621067=[{s:'acfv'},{s:'um2'},{m:'c13641_BFAudienceLinkage',s:'w8t',t:45140000}];
+var ftRuleMatch_4621067="0";
+var ftTimestamp_4621067="1589705827";
+var ftImp4621067 = {};
+ftImp4621067.privacy = "x";
+ftImp4621067.guidAge = "26";
+ftImp4621067.impID = "7A709223-433F-764D-F54B-1869213EF1B5";
+ftImp4621067.duid = "FT:4494DBC6EFB93C";
+
+ftImp4621067.ft_tpplid = "";
+ftImp4621067.ft_c = {};
+
+document.write('<scr'+'ipt src="https://cdn.flashtalking.com/xre/462/4621067/3042584/js/j-4621067-3042584.js" id="ftscript_m4621067" name="ftscript_m4621067"></scr'+'ipt>');

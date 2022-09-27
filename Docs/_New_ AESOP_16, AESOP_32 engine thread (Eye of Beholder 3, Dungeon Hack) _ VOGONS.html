@@ -1,0 +1,2570 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://www.vogons.org/viewtopic.php?t=20601 -->
+<html dir="ltr" lang="en-gb" data-font-size="-1" data-big-nav=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+				<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; form-action &#39;self&#39;; img-src * data: blob:; media-src *; object-src &#39;none&#39;; style-src &#39;self&#39;; base-uri &#39;none&#39;; upgrade-insecure-requests">
+				<title>*New* AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) \
+									VOGONS</title>
+
+		<link href="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/stylesheet.css" rel="stylesheet">
+		<link href="https://www.vogons.org/styles/vogons199x/theme/icons.woff2?2" rel="preload" as="font" type="font/woff2" crossorigin="">
+					<link href="https://www.vogons.org/styles/vogons199x/theme/fonts/MerriweatherSans-Book.woff2?1" rel="preload" as="font" type="font/woff2" crossorigin="">
+					<link href="https://www.vogons.org/styles/vogons199x/theme/fonts/MerriweatherSans-Bold.woff2?1" rel="preload" as="font" type="font/woff2" crossorigin="">
+				<link href="https://www.vogons.org/styles/vogons199x/theme/fonts/IBMPlexMono-Regular.woff2" rel="preload" as="font" type="font/woff2" crossorigin="">
+
+		
+		<link rel="icon" href="https://www.vogons.org/images/favicon.png">
+<link rel="apple-touch-icon" href="https://www.vogons.org/images/apple-touch-icon.png">
+
+				
+
+		
+		<script defer="" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/all.min.js"></script>
+				
+		<script src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/head.min.js"></script>
+
+					<link rel="alternate" type="application/atom+xml" title="Feed - VOGONS" href="https://www.vogons.org/feed">									<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://www.vogons.org/feed/topics">						<link rel="alternate" type="application/atom+xml" title="Feed - Forum - DOS" href="https://www.vogons.org/feed/forum/7">			<link rel="alternate" type="application/atom+xml" title="Feed - Topic - *New* AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack)" href="https://www.vogons.org/feed/topic/20601">					
+					<link rel="canonical" href="https://www.vogons.org/viewtopic.php?t=20601">
+			</head>
+	<body>
+		<div id="top" class="root">
+						<div class="wrap">
+				<a href="https://www.vogons.org/viewtopic.php?t=20601#main" class="skip-link">Skip to content</a>
+				<header class="header">
+					<div class="header_banner">
+						<h1 class="header_top header_logo logo" aria-labelledby="logo_desc">
+							<a class="logo_link" href="https://www.vogons.org/index.php" title="Board index" aria-labelledby="logo_desc">
+																	<svg role="img" viewBox="14 12 152 38" width="152" height="38" class="logo_gfx"><desc id="logo_desc">VOGONS</desc><g aria-hidden="true">
+									<path class="logo_gfx_text" d="M117 25.5v19.495h-4V39.5l-1.474 1.478c-2.688 2.275-5.88 3.522-9.026 3.522-4.863 0-8.513-2.983-10.326-4.735-.26-.24-.63-.72-.63-.72l-.584.72c-2.922 2.824-6.982 4.735-10.71 4.735-4.923 0-8.888-2.422-11.333-6.415l-.657-1.058c-.307.32-.532.701-.788 1.058C64.415 43.084 59.523 44.5 56 44.5c-7.76 0-14-6.541-14-14.25C42 22.406 48.24 16 56 16c4.357 0 8.794 2.122 11.511 5.669.244.328.499.648.75.971l.618-.971C71.614 18.093 75.916 16 80.25 16c4.953 0 9.169 3.349 10.711 4.837.246.238.612.663.612.663l.603-.664C95.296 17.818 98.871 16 102.5 16c3.195 0 6.205 1.192 8.889 3.464L113 21.25V16l21 24V16h4v12.212s-.02-.45 0-.712c1.328-6.52 7.321-11.5 14-11.5 5.303 0 11.11 3.541 13.5 8h-5c-2.203-3.004-6.264-4-8.5-4a10.289 10.289 0 0 0-9.75 7c-.132.39-.143.602-.25 1h23.86c.11.698.161 1.61.161 2.303 0 7.764-6.264 14.197-14.02 14.197-5.308 0-10.68-3.905-13.001-7.5h5c2.197 2.082 5.407 3.5 8 3.5 4.363 0 8.21-2.778 9.634-6.944.138-.395.28-1.162.42-1.556H138v18zM80.25 20C74.684 20 70 24.549 70 30.25c0 5.702 4.684 10.25 10.25 10.25 3.735 0 7.264-2.057 9.067-5.331.467-.97 1.433-3.169 1.433-3.169H80v-4h19l-2 4h-2.5s-.572 1.833-.747 2.478c-.085.177.003.374.005.56l.062.115c1.797 3.277 4.942 5.343 8.68 5.347 5.641 0 10.5-4.607 10.5-10.25 0-5.619-4.86-10.25-10.5-10.25-4.04 0-6.805 1.702-8.5 5h-5c-1.848-3.169-5.117-5-8.75-5zM56 20c-5.645 0-10 4.609-10 10.25 0 5.646 4.355 10.25 10 10.25 5.561 0 10-4.541 10-10.25S61.561 20 56 20zm-42-8h4.66L38 35.5V16h4v30z"></path></g></svg>
+																									<span class="logo_party" aria-hidden="true"></span>
+															</a>
+						</h1>
+						
+												<div class="header_top header_global-nav">
+															<div>
+																		<form class="search-bar" role="search" action="https://www.vogons.org/search.php" method="get" data-hide-below-table="">
+										<div class="search-bar_container">
+											<div class="search-bar_container-content">
+												<input id="search" required="" name="keywords" type="search" title="Search for keywords" class="search-bar_input blank" value="" accesskey="f">
+												<label for="search" class="search-bar_label">Search…</label>
+												<div class="search-bar_buttons">
+													<button class="search-bar_button" data-icon="search" type="submit" title="Search" aria-disabled="true"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Search</span></button>
+													<a class="search-bar_button" data-icon="options" href="https://www.vogons.org/search.php" title="Advanced search"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Advanced search</span></a>
+												</div>
+											</div>
+										</div>
+																					<div class="search-bar_option"><label class="search-bar_option_label" tabindex="-1"><input name="t" type="checkbox" role="switch" value="20601"> Just this topic</label></div>
+										
+										
+									</form>
+									<details class="popup" data-popup-start="" data-search="" data-show-below-table="">
+										<summary class="popup_button" aria-haspopup="dialog"><span class="button" data-icon="search" data-icon-only="" title="Search"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Search</span></span></summary>
+										<div class="popup_content">
+											<form role="search" class="popup_content_inner container-spaced popup-search" action="https://www.vogons.org/search.php" method="get">
+												<div class="mini-spaced">
+													<div class="input popup-search_container">
+														<input id="popup_search" required="" name="keywords" type="search" title="Search for keywords" class="input_field popup-search_input blank" value="" accesskey="f" autocomplete="off">
+														<label for="popup_search" class="input_label popup-search_label">Search…</label>
+														<button class="fake-button popup-search_button" data-icon="search" type="submit" title="Search" aria-disabled="true"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Search</span></button>
+														<a class="fake-button popup-search_button" data-icon="options" href="https://www.vogons.org/search.php" title="Advanced search"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Advanced search</span></a>
+													</div>
+																											<div><label><input name="t" type="checkbox" role="switch" value="20601"> Just this topic</label></div>
+																																								<hr class="hr">
+																									</div>
+
+																								<h3 class="sr">Common searches</h3>
+												<ul class="link-group popup-search_common" data-push-style="">
+																																							<li><a class="link-group_link" href="https://www.vogons.org/search.php?search_id=active_topics">Active topics</a></li>
+												</ul>
+												
+											</form>
+										</div>
+									</details>
+																	</div>
+														
+<section aria-labelledby="main-menu">
+	<h2 id="main-menu" class="old-or-sr">Main menu</h2>
+	<ul role="presentation" class="header_global-nav_list">
+				
+		
+						
+					<li><details class="popup" data-popup-start="">
+					<summary class="popup_button" aria-haspopup="dialog"><span class="button" data-icon-only="" data-icon="login" title="Login"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Login</span></span></summary>
+					<div class="popup_content login" role="dialog" aria-labelledby="main-login">
+						<h2 id="main-login" class="old-or-sr">Login</h2>
+						<form class="popup_content_inner login_form" action="https://www.vogons.org/ucp.php?mode=login" method="post">
+							<div class="input login_input">
+								<input class="input_field blank" type="text" name="username" id="header-username" autocomplete="username" value="" required="">
+								<label class="input_label" for="header-username">Username</label>
+							</div>
+							<div class="input login_input">
+								<input class="input_field blank" type="password" id="header-password" name="password" autocomplete="current-password" required="">
+								<label class="input_label" for="header-password">Password</label>
+							</div>
+							<div class="input login_input">
+	<input class="input_field blank" type="text" name="otp" id="otp" inputmode="numeric" autocomplete="one-time-code">
+	<label class="input_label" for="otp">2FA token (optional)</label>
+</div>
+							<div>
+								<div><label class="login_checkbox"><input type="checkbox" role="switch" name="autologin" checked=""> Remember me</label></div>
+								<div><label class="login_checkbox"><input type="checkbox" role="switch" name="viewonline"> Hide my online status this session</label></div>
+							</div>
+							<div class="login_buttons">
+								<button class="push-button login_button" data-icon="login" type="submit" name="login" aria-disabled="true"><span aria-hidden="true" data-icon-slot=""></span>Log in</button>
+								<div class="login_lost-password">
+									<a href="https://www.vogons.org/ucp.php?mode=sendpassword">Lost password</a><br>
+									<a href="https://www.vogons.org/ucp.php?mode=resend_act">Send activation email</a>
+								</div>
+							</div>
+
+															<div class="login_create-new" data-show-below-min="">or <a class="push-button" data-icon="register" data-small="" href="https://www.vogons.org/ucp.php?mode=register"><span aria-hidden="true" data-icon-slot=""></span>Create a new account</a></div>
+							
+							<input type="hidden" name="redirect" value="./viewtopic.php?t=20601">
+<input type="hidden" name="creation_time" value="1589705657">
+<input type="hidden" name="form_token" value="e541c99b407b906f948a883de0180eab3d554467">
+
+						</form>
+					</div>
+				</details></li>
+													<li data-hide-below-min=""><a class="button" data-icon="register" data-icon-only="" title="Create a new account" href="https://www.vogons.org/ucp.php?mode=register"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Create a new account</span></a></li>
+
+
+									</ul>
+</section>
+						</div>
+					</div>
+
+					<div class="header_nav">
+													<nav class="header_crumbs" aria-labelledby="crumbs">
+								<h2 class="sr" id="crumbs">Breadcrumbs</h2>
+								<ol class="crumbs mono" role="presentation"><li><a class="crumbs_home" href="https://www.vogons.org/index.php" title="Board index"><span class="old-or-sr">Board index</span></a></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="47"><a class="crumbs_link" href="https://www.vogons.org/viewforum.php?f=47" itemprop="url"><span itemprop="title">The Guide</span></a></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="7"><a class="crumbs_link" href="https://www.vogons.org/viewforum.php?f=7" itemprop="url"><span itemprop="title">DOS</span></a></li></ol>							</nav>
+						
+													<h2 class="old-or-sr no-print" id="header_searches">Common searches</h2>
+							<ul class="link-group header_searches" data-hide-below-table="">
+																								<li><a class="link-group_link" href="https://www.vogons.org/search.php?search_id=active_topics">Active topics</a></li>
+							</ul>
+											</div>
+				</header>
+
+				<hr class="old">
+
+				
+				<main id="main" class="main spaced">
+					
+					
+
+<article class="spaced" role="article" aria-labelledby="title">
+	<div class="title-bar" data-actions="">
+				<h2 id="title" class="title"><a class="title_link" href="https://www.vogons.org/viewtopic.php?f=7&amp;t=20601">*New* AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack)</a></h2>
+				
+		<div class="actions title-bar_actions">
+			<section aria-labelledby="actions">
+				<h3 id="actions" class="old-or-sr">Topic actions</h3>
+				<ul class="actions">
+					
+											<li><span class="button" title="This topic is locked. You cannot reply or edit posts." data-icon="topic_locked" data-icon-only="" data-disabled=""><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">This topic is locked. You cannot reply or edit posts.</span></span></li>
+					
+					
+					
+
+															
+										
+					
+					
+					
+									</ul>
+			</section>
+
+				<nav role="navigation" aria-labelledby="pagination">
+		<h3 class="old-or-sr" id="pagination">Pagination</h3>		<ul class="pagination link-group" data-opaque="">
+												<li aria-current="page"><span class="link-group_spacer mono pagination_current" data-highlight="" data-icon="pagination"><span aria-hidden="true" data-icon-slot=""></span><span role="text presentation"><span class="old-or-sr">Page&nbsp;</span>1</span></span></li>
+																<li class="mono pagination_item"><a class="link-group_link pagination_link" href="https://www.vogons.org/viewtopic.php?f=7&amp;t=20601&amp;start=20"><span><span class="old-or-sr">Page&nbsp;</span>2</span></a></li>
+																</ul>
+	</nav>
+
+
+					</div>
+	</div>
+	<div>
+								<section aria-labelledby="post-149670-title" id="p149670" class="post">
+								<h3 id="post-149670-title" class="old-or-sr">First post, by mirekluza</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=149670#p149670" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2009-01-22T07:22:16+00:00">2009-01-22, 07:22</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+												<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1130" class="username"><span role="text presentation">mirekluza</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1130&amp;sr=posts" title="Search mirekluza’s posts">1697</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-08-21, 04:19</dd>
+		</div>
+		
+									
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>DOSBox Moderator</span>
+																</div>
+			</div>
+	
+	<dl class="post_user_avatarless-meta" role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">DOSBox Moderator</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1130&amp;sr=posts" title="Search mirekluza’s posts">1697</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-08-21, 04:19</dd>
+		</div>
+		
+									
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+																																	
+						<div class="post_content"><p>It seems that recently a &lt;censored&gt; hacker was at work on Vogons. Apart from other things he probably deleted the original "AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack)".</p>
+
+<p><b class="bb_b">I hope that moderators can recover it somehow, but if not, I will try to make a new one with all informations as in the old one.</b><br>
+(If the old thread is recovered, I will delete this one).</p>
+
+<p>At the beginning I post the ZIP with the cached content of the thread as it was on 12th January 2009 (thanks to Google and DosFreak).  It is in MHT format (use Opera or the Internet Explorer to view it). The important attachments will be posted below (I hope I have backuped everything locally, but as far as I know these things are not anywhere else on Internet).</p>
+
+<p><b class="bb_b">What is AESOP engine?</b><br>
+The both "Eye of Beholder III" and "Dungeon Hack" games from SSI use one game engine (though modified in each case) called AESOP/16. This was a game engine using object oriented language made by John Miles.<br>
+I managed to persuade him to release the source code for the AESOP/32 (improved version of AESOP engine planned for release as a patch for EOB 3 - though this release probably never appeared). I compiled the sources and was able to make the "EOB 3" run with it. It is playable though not tested much.<br>
+I also made the DAESOP utility enabling to disassemble the AESOP engine bytecode, extract/replace resources, convert original EOB 3 files for AESOP/32 etc.Only future tells whether something usefull comes from it... Personally I would like to see for example a native port of "EOB 3" for some mobile platforms...<br>
+At the moment Darke from Exult team plays with the engine...</p> 
+
+<p>Mirek</p></div>
+
+						
+							<div role="group" class="post_attachments" aria-labelledby="post-149670-attachments-title">
+		<h4 id="post-149670-attachments-title" class="post_attachments_title"><span class="text-label">Attachments</span></h4>
+					<ul role="list" class="post_attachments_list">
+							<li role="listitem" data-icon="attachment"><span aria-hidden="true" data-icon-slot=""></span>
+
+
+			
+					<dl role="associationlist definitionlist" class="attachment_meta">
+	<dt role="associationlistitemkey term" class="old-or-sr">Filename</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filename"><a id="a-5712" href="https://www.vogons.org/download/file.php?id=5712">original_AESOP_thread_till_12th_January_2009.zip</a></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">File size</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filesize">670.97 <abbr role="text presentation" title="kibibytes" aria-label="kibibytes">KiB</abbr></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">Downloads</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_downloads">1864 downloads</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File comment</dt>
+		<dd role="associationlistitemvalue definition">Original AESOP thread till 12th January 2009 (MHT format - use Opera or the Internet Explorer to view it)</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File license</dt>
+	<dd role="associationlistitemvalue definition"><span class="attachment_license" data-icon="view-license"><span aria-hidden="true" data-icon-slot=""></span>Fair use/fair dealing exception</span></dd>
+</dl>
+
+		
+		
+			</li>
+						</ul>
+			</div>
+
+
+																			<div role="note" class="post_notice">
+								<small class="dim-text">Last edited by <a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1130" class="username"><span role="text presentation">mirekluza</span></a> on 2009-01-22, 15:31. Edited 2 times in total.</small>
+															</div>
+																		
+											</div>
+				</div>
+							</section>
+											<article aria-labelledby="post-149672-title" id="p149672" class="post">
+								<h3 id="post-149672-title" class="old-or-sr">Reply 1 of 26, by mirekluza</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=149672#p149672" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2009-01-22T07:23:56+00:00">2009-01-22, 07:23</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+												<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1130" class="username"><span role="text presentation">mirekluza</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1130&amp;sr=posts" title="Search mirekluza’s posts">1697</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-08-21, 04:19</dd>
+		</div>
+		
+									
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>DOSBox Moderator</span>
+																</div>
+			</div>
+	
+	<dl class="post_user_avatarless-meta" role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">DOSBox Moderator</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1130&amp;sr=posts" title="Search mirekluza’s posts">1697</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-08-21, 04:19</dd>
+		</div>
+		
+									
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>Original code from John Miles/John Ratcliff</p>
+
+<p>AESOP/32 compiler/documentation from John Miles <br>
+(aesop32.zip)</p>
+
+<p>AESOP/32 runtime from John Miles (uses MOD32SND - see below)<br>
+(runtime.zip)</p>
+
+<p>MOD32SND (sound mixer) from John Ratcliff (used by the AESOP/32 runtime above) <br>
+(sound.zip)</p></div>
+
+						
+							<div role="group" class="post_attachments" aria-labelledby="post-149672-attachments-title">
+		<h4 id="post-149672-attachments-title" class="post_attachments_title"><span class="text-label">Attachments</span></h4>
+					<ul role="list" class="post_attachments_list">
+							<li role="listitem" data-icon="attachment"><span aria-hidden="true" data-icon-slot=""></span>
+
+
+			
+					<dl role="associationlist definitionlist" class="attachment_meta">
+	<dt role="associationlistitemkey term" class="old-or-sr">Filename</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filename"><a id="a-5715" href="https://www.vogons.org/download/file.php?id=5715">aesop32.zip</a></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">File size</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filesize">446.56 <abbr role="text presentation" title="kibibytes" aria-label="kibibytes">KiB</abbr></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">Downloads</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_downloads">2070 downloads</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File comment</dt>
+		<dd role="associationlistitemvalue definition">AESOP/32 compiler/documentation</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File license</dt>
+	<dd role="associationlistitemvalue definition"><span class="attachment_license" data-icon="view-license"><span aria-hidden="true" data-icon-slot=""></span>Fair use/fair dealing exception</span></dd>
+</dl>
+
+		
+		
+			</li>
+							<li role="listitem" data-icon="attachment"><span aria-hidden="true" data-icon-slot=""></span>
+
+
+			
+					<dl role="associationlist definitionlist" class="attachment_meta">
+	<dt role="associationlistitemkey term" class="old-or-sr">Filename</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filename"><a id="a-5714" href="https://www.vogons.org/download/file.php?id=5714">runtime.zip</a></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">File size</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filesize">528.74 <abbr role="text presentation" title="kibibytes" aria-label="kibibytes">KiB</abbr></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">Downloads</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_downloads">2585 downloads</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File comment</dt>
+		<dd role="associationlistitemvalue definition">AESOP/32 runtime from John Miles</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File license</dt>
+	<dd role="associationlistitemvalue definition"><span class="attachment_license" data-icon="view-license"><span aria-hidden="true" data-icon-slot=""></span>Fair use/fair dealing exception</span></dd>
+</dl>
+
+		
+		
+			</li>
+							<li role="listitem" data-icon="attachment"><span aria-hidden="true" data-icon-slot=""></span>
+
+
+			
+					<dl role="associationlist definitionlist" class="attachment_meta">
+	<dt role="associationlistitemkey term" class="old-or-sr">Filename</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filename"><a id="a-5713" href="https://www.vogons.org/download/file.php?id=5713">sound.zip</a></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">File size</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filesize">11.38 <abbr role="text presentation" title="kibibytes" aria-label="kibibytes">KiB</abbr></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">Downloads</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_downloads">1927 downloads</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File comment</dt>
+		<dd role="associationlistitemvalue definition">MOD32SND (sound mixer) from John Ratcliff</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File license</dt>
+	<dd role="associationlistitemvalue definition"><span class="attachment_license" data-icon="view-license"><span aria-hidden="true" data-icon-slot=""></span>Fair use/fair dealing exception</span></dd>
+</dl>
+
+		
+		
+			</li>
+						</ul>
+			</div>
+
+
+																			<div role="note" class="post_notice">
+								<small class="dim-text">Last edited by <a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1130" class="username"><span role="text presentation">mirekluza</span></a> on 2009-01-22, 07:51. Edited 1 time in total.</small>
+															</div>
+																		
+											</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-149673-title" id="p149673" class="post">
+								<h3 id="post-149673-title" class="old-or-sr">Reply 2 of 26, by mirekluza</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=149673#p149673" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2009-01-22T07:24:15+00:00">2009-01-22, 07:24</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+												<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1130" class="username"><span role="text presentation">mirekluza</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1130&amp;sr=posts" title="Search mirekluza’s posts">1697</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-08-21, 04:19</dd>
+		</div>
+		
+									
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>DOSBox Moderator</span>
+																</div>
+			</div>
+	
+	<dl class="post_user_avatarless-meta" role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">DOSBox Moderator</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1130&amp;sr=posts" title="Search mirekluza’s posts">1697</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-08-21, 04:19</dd>
+		</div>
+		
+									
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>Newly done things</p>
+
+<p>AESOP/32 runtime interpreter build from sources (the complete project in the "Open Watcom" enabling to build an AESOP/32 interpreter which works with the "Eye of Beholder 3")<br>
+(AESOP_INTERPRETER_BUILD_2a.zip)</p>
+<blockquote role="blockquote group" aria-label="Quote" class="bb_quote"><details class="bb_quote_body"><summary class="bb_quote_more"><span class="bb_quote_more_preview">...
+Two open source libraries from John Miles page are needed (AIL and VFX). Go to http://www.thegleam.com/ke5fx/ to download th […]<br></span><span class="link-button bb_quote_more_inner" data-icon="down-arrow"><span aria-hidden="true" data-icon-slot=""></span>Show full quote</span></summary>
+<p>...<br>
+Two open source libraries from John Miles page are needed (AIL and VFX). Go to <a href="http://www.thegleam.com/ke5fx/">http://www.thegleam.com/ke5fx/</a> to download them.<br>
+...<br>
+After compiling the project ARUN.EXE is created, rename it to INTERP.EXE - this is the interpreter. <br>
+How to use it: <br>
+a) Copy EOB 3 files into a directory <br>
+b) Convert EYE.RES for the AESOP/32 (using the DAESOP utilitity - see the previous posts and DAESOP README.TXT) <br>
+c) Copy files from RUNTIME.ZIP to the same directory (overwrite) <br>
+d) Copy the new INTERP.EXE to the same directory (overwrite) <br>
+e) Copy MCGA.DLL (from VFX library) and sound DLLs (from AIL library) to the same directory (overwrite) <br>
+f) Start DOSBOX <br>
+g) Configure the game <br>
+h) Run the game</p> 
+</details></blockquote>
+
+<p>DAESOP 0.85 utility (resource extractor/replacer, bytecode disassembler, informs about resource types and string resource values, converts the <br>
+EOB 3 to the AESOP/32 - bitmaps/fonts/patching). <br>
+The DAESOP can now convert the "Eye of Beholder 3" to the AESOP/32 engine and the game is fully playable as far as I know (using the binaries provided by John Miles), though it needs more testing to be sure that everything is ok...<br>
+(DAESOP_0_85.zip)</p>
+
+<p>List of the "Dungeon Hack" functions not in the AESOP/32 (potentially useful in future when adding support for DH into AESOP/32)<br>
+(ADDITIONAL_DH_RUNTIME_FUNCTIONS.TXT)</p></div>
+
+						
+							<div role="group" class="post_attachments" aria-labelledby="post-149673-attachments-title">
+		<h4 id="post-149673-attachments-title" class="post_attachments_title"><span class="text-label">Attachments</span></h4>
+					<ul role="list" class="post_attachments_list">
+							<li role="listitem" data-icon="attachment"><span aria-hidden="true" data-icon-slot=""></span>
+
+
+			
+					<dl role="associationlist definitionlist" class="attachment_meta">
+	<dt role="associationlistitemkey term" class="old-or-sr">Filename</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filename"><a id="a-5718" href="https://www.vogons.org/download/file.php?id=5718">ADDITIONAL_DH_RUNTIME_FUNCTIONS5.ZIP</a></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">File size</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filesize">2.77 <abbr role="text presentation" title="kibibytes" aria-label="kibibytes">KiB</abbr></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">Downloads</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_downloads">1305 downloads</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File license</dt>
+	<dd role="associationlistitemvalue definition"><span class="attachment_license" data-icon="view-license"><span aria-hidden="true" data-icon-slot=""></span>Fair use/fair dealing exception</span></dd>
+</dl>
+
+		
+		
+			</li>
+							<li role="listitem" data-icon="attachment"><span aria-hidden="true" data-icon-slot=""></span>
+
+
+			
+					<dl role="associationlist definitionlist" class="attachment_meta">
+	<dt role="associationlistitemkey term" class="old-or-sr">Filename</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filename"><a id="a-5717" href="https://www.vogons.org/download/file.php?id=5717">DAESOP_0_85.zip</a></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">File size</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filesize">183.1 <abbr role="text presentation" title="kibibytes" aria-label="kibibytes">KiB</abbr></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">Downloads</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_downloads">2256 downloads</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File license</dt>
+	<dd role="associationlistitemvalue definition"><span class="attachment_license" data-icon="view-license"><span aria-hidden="true" data-icon-slot=""></span>Fair use/fair dealing exception</span></dd>
+</dl>
+
+		
+		
+			</li>
+							<li role="listitem" data-icon="attachment"><span aria-hidden="true" data-icon-slot=""></span>
+
+
+			
+					<dl role="associationlist definitionlist" class="attachment_meta">
+	<dt role="associationlistitemkey term" class="old-or-sr">Filename</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filename"><a id="a-5716" href="https://www.vogons.org/download/file.php?id=5716">AESOP_INTERPRETER_BUILD_2a.zip</a></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">File size</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_filesize">286.12 <abbr role="text presentation" title="kibibytes" aria-label="kibibytes">KiB</abbr></dd>
+	<dt role="associationlistitemkey term" class="old-or-sr">Downloads</dt>
+	<dd role="associationlistitemvalue definition" class="attachment_meta_downloads">1740 downloads</dd>
+			<dt role="associationlistitemkey term" class="old-or-sr">File license</dt>
+	<dd role="associationlistitemvalue definition"><span class="attachment_license" data-icon="view-license"><span aria-hidden="true" data-icon-slot=""></span>Fair use/fair dealing exception</span></dd>
+</dl>
+
+		
+		
+			</li>
+						</ul>
+			</div>
+
+
+																								
+											</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-149686-title" id="p149686" class="post">
+								<h3 id="post-149686-title" class="old-or-sr">Reply 3 of 26, by mirekluza</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=149686#p149686" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2009-01-22T10:53:34+00:00">2009-01-22, 10:53</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+												<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1130" class="username"><span role="text presentation">mirekluza</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1130&amp;sr=posts" title="Search mirekluza’s posts">1697</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-08-21, 04:19</dd>
+		</div>
+		
+									
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>DOSBox Moderator</span>
+																</div>
+			</div>
+	
+	<dl class="post_user_avatarless-meta" role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">DOSBox Moderator</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1130&amp;sr=posts" title="Search mirekluza’s posts">1697</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-08-21, 04:19</dd>
+		</div>
+		
+									
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>The original thread will *probably* not be restored. I will try to add some other things from the old thread here in future.<br>
+Feel free to ask if the old thread contained something important for you I did not add here. I have backup of most of things from the old thread.</p>
+
+<p>Mirek</p></div>
+
+						
+						
+
+																								
+											</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-149699-title" id="p149699" class="post">
+								<h3 id="post-149699-title" class="old-or-sr">Reply 4 of 26, by keropi</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=149699#p149699" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2009-01-22T15:34:45+00:00">2009-01-22, 15:34</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/1291_1495285984.png" width="74" height="100" alt="keropi’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291" class="username"><span role="text presentation">keropi</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>l33t++</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">l33t++</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>what is the point? don't get me wrong but the original author would not release the sources IIRC... unless the archives above contain a better engine? <br>
+I actually own EOBIII from when it was released, I could NEVER enjoy it on my 386sx back then...</p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p><span class="emoji" data-version="6" data-src="1f3b5" data-alt="musical note">🎵</span><a href="https://www.serdashop.com/ISA-MPU-Card">Link to buy a PCMIDI mpu</a><br>
+<span class="emoji" data-version="6" data-src="1f3a7" data-alt="headphone">🎧</span><a href="https://www.vogons.org/viewtopic.php?f=62&amp;t=70682">Orpheus soundcard project</a><br>
+<span class="emoji" data-version="6" data-src="1f4bb" data-alt="laptop computer">💻</span><a href="http://www.amibay.com/showthread.php?106094">WTB Amstrad PC7486SLC-33 system</a></p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-149701-title" id="p149701" class="post">
+								<h3 id="post-149701-title" class="old-or-sr">Reply 5 of 26, by DosFreak</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=149701#p149701" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2009-01-22T16:14:00+00:00">2009-01-22, 16:14</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=2"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/2.png" width="120" height="88" alt="DosFreak’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=2" class="username-mod" title="Moderator"><span role="text presentation"><span aria-hidden="true"></span>DosFreak</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=2&amp;sr=posts" title="Search DosFreak’s posts">10853</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2002-06-30, 16:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Your Head</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>l33t++</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">l33t++</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=2&amp;sr=posts" title="Search DosFreak’s posts">10853</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2002-06-30, 16:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Your Head</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p><a href="http://74.125.47.132/search?q=cache:z8aFcGYbK4sJ:www.vogons.org/viewtopic.php%3Ft%3D13168+aesop+site:www.vogons.org&amp;hl=en&amp;ct=clnk&amp;cd=2&amp;gl=us">http://74.125.47.132/search?q=cache:z8aFcGYbK … clnk&amp;cd=2&amp;gl=us</a></p>
+
+<blockquote role="blockquote group" aria-label="Quote" class="bb_quote"><details class="bb_quote_body"><summary class="bb_quote_more"><span class="bb_quote_more_preview">mirekluza
+DOSBox Moderator
+no avatar
+Joined: 2003-08-21
+Posts: 1756
+	Yesterday I received some nice things from John Miles. I di […]<br></span><span class="link-button bb_quote_more_inner" data-icon="down-arrow"><span aria-hidden="true" data-icon-slot=""></span>Show full quote</span></summary><p>mirekluza<br>
+DOSBox Moderator<br>
+no avatar<br>
+Joined: 2003-08-21<br>
+Posts: 1756<br>
+	Yesterday I received some nice things from John Miles. I did not check it in detail yet, but it looks like complete sources for AESOP/32 compiler and documentation.<br>
+There is no runtime interpreter (too much SSI copyrighted things), though I think that interpreters from EOB 3/Bungeon Hack *may* be usefull (I did not check)...</p>
+
+<p>John Miles explicitly permitted to use it without any restrictions (he owns the copyright). See below.</p>
+
+<p>Just one comment to the quote below: as far as I know 32bit version of AESOP never shipped... Or has anyone seen it? It should be recognizable by using extender (DOS4GW). John Miles made it as patch for EOB 3 (fixing slowdowns) and submitted to SSI. My guess is that it never gort further... If you know anything else I would welcome the information...</p>
+
+<p>Quote:</p>
+
+<p>...<br>
+We did try to make the code as reusable as possible, with the<br>
+goal of not only shipping multiple games with the same engine,<br>
+but making the engine usable by less-technical artists and scripters.<br>
+If you reinvent the engine every game, the game<br>
+authors never get a chance to master the technology.<br>
+...<br>
+Here's the 32-bit compiler and manual; looking at arcmsg.h, it<br>
+appears we still called it "AESOP/16," because the bytecode<br>
+interpreter used 16-bit native words. I don't know if the<br>
+version of AESOP you have is the 32-bit DOS4GW-based one or not,<br>
+but they were very similar.<br>
+...<br>
+I own the copyright to the AESOP package itself, and as far as<br>
+I'm concerned, it can be considered public-domain. You can do<br>
+anything you want with it, forward it to Michael, post it online,<br>
+upload it to a warez site, whatever. Happy I did remove the<br>
+runtime interpreter code, though, because it would be way too<br>
+much work to separate my own code from the parts that are owned<br>
+by SSI's corporate heirs.</p>
+
+<p>-- john</p>
+
+
+<p>Mirek</p></details></blockquote></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p><a href="https://www.vogons.org/viewtopic.php?f=31&amp;t=55706&amp;p=636941&amp;hilit=compilation#p609435S">DOSBox Compilation Guides</a><br>
+<a href="https://www.vogons.org/viewtopic.php?t=7745">DosBox Feature Request Thread</a><br>
+<a href="https://www.vogons.org/viewtopic.php?t=8784">PC Game Compatibility List</a><br>
+<a href="http://www.catb.org/~esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a><br>
+<a href="https://www.vogons.org/viewtopic.php?f=5&amp;t=64039&amp;p=719154#p719154">Running DRM games offline</a></p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183314-title" id="p183314" class="post">
+								<h3 id="post-183314-title" class="old-or-sr">Reply 6 of 26, by JemyM</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183314#p183314" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-22T09:29:03+00:00">2010-03-22, 09:29</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/19586_1503314370.jpg" width="100" height="100" alt="JemyM’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586" class="username"><span role="text presentation">JemyM</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>Newbie</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">Newbie</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>I finished the entire game with AESOP/32 and published my playthrough on youtube:<br>
+<a href="http://www.youtube.com/view_play_list?p=3E2550459C8A4766">http://www.youtube.com/view_play_list?p=3E2550459C8A4766</a></p>
+
+<p>With AESOP/16 I had many problems, even in DOSBox.<br>
+With AESOP/32 the game feels almost as fast as the first two games in the series and the choppiness/slowdowns/audio issues that the original game have, even with DOSBox, is gone, including the sound-go-quiet-when-moving-cursor-issue. This is a definite must have "patch". <span class="emoji" data-version="6.1" data-src="1f600" data-alt="grinning face">😀</span></p>
+
+<p>For those who just want to play, only a few files is neccessary;<br>
+<b class="bb_b">AESOP.EXE</b><br>
+<b class="bb_b">DOS4GW.EXE</b><br>
+<b class="bb_b">INTERP.EXE</b><br>
+<b class="bb_b">A32ADLIB.DLL</b><br>
+<b class="bb_b">A32MT32.DLL</b><br>
+<b class="bb_b">A32SBDG.DLL</b><br>
+<b class="bb_b">A32SPKR.DLL</b><br>
+<b class="bb_b">MCGA.DLL</b><br>
+(from <a href="http://www.vogons.org/download.php?id=5714">runtime.zip</a>)</p>
+
+<p><b class="bb_b">EYE.RES</b> renamed from EYE2.RES (Copy EYE.RES to the extracted <a href="http://www.vogons.org/download.php?id=5717">DAESOP_0_85.zip</a> and run EYECNV.BAT to get eye2.res, about 6.5mb)</p></div>
+
+						
+						
+
+																			<div role="note" class="post_notice">
+								<small class="dim-text">Last edited by <a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586" class="username"><span role="text presentation">JemyM</span></a> on 2010-03-23, 09:08. Edited 1 time in total.</small>
+															</div>
+																		
+						<div role="note" class="post_signature" aria-label="Signature"><p>Okay, now roll sanity.</p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183316-title" id="p183316" class="post">
+								<h3 id="post-183316-title" class="old-or-sr">Reply 7 of 26, by keropi</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183316#p183316" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-22T10:16:14+00:00">2010-03-22, 10:16</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/1291_1495285984.png" width="74" height="100" alt="keropi’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291" class="username"><span role="text presentation">keropi</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>l33t++</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">l33t++</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>aaahhhh!!! finally a ready-to-use new engine!!!<br>
+From what I see there is also no copy protection right? (I actually own 3 versions of EOBIII, do I need to take out a manual? currently I am just using a TRSI patch  <span class="emoji" data-version="6" data-src="1f60a" data-alt="smiling face with smiling eyes">😊</span>  ) Gonna test it later!!!</p>
+
+<p>edit: how do I set sound? It uses the same utility as the normal version? will my LAPC-I work? I just take those files, drop them in the normal EOBIII directory (replacing if needed) and all is good to go? Will I <b class="bb_b">finally</b> play and enjoy it after all those years , surpassing the disappointment of getting this original in my 386sx years? <span class="emoji" data-version="9" data-src="1f923" data-alt="rolling on the floor laughing">🤣</span></p>
+
+<p><img src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/flelo4.jpg" class="bb_image" referrerpolicy="no-referrer" alt="flelo4.jpg"></p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p><span class="emoji" data-version="6" data-src="1f3b5" data-alt="musical note">🎵</span><a href="https://www.serdashop.com/ISA-MPU-Card">Link to buy a PCMIDI mpu</a><br>
+<span class="emoji" data-version="6" data-src="1f3a7" data-alt="headphone">🎧</span><a href="https://www.vogons.org/viewtopic.php?f=62&amp;t=70682">Orpheus soundcard project</a><br>
+<span class="emoji" data-version="6" data-src="1f4bb" data-alt="laptop computer">💻</span><a href="http://www.amibay.com/showthread.php?106094">WTB Amstrad PC7486SLC-33 system</a></p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183324-title" id="p183324" class="post">
+								<h3 id="post-183324-title" class="old-or-sr">Reply 8 of 26, by JemyM</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183324#p183324" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-22T14:48:59+00:00">2010-03-22, 14:48</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/19586_1503314370.jpg" width="100" height="100" alt="JemyM’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586" class="username"><span role="text presentation">JemyM</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>Newbie</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">Newbie</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>The version I ended up with had copy protection when I tried it, so I had to use the <a href="http://stanislavs.tripod.com/games/eob3fix.rar">fix</a> from stanislavs site.<br>
+There's only one single check in the entire game though.</p>
+
+<p>To set the sound, type SOUND at the prompt inside the EoB3 folder. I used MT-32 with Timidity++ with Shane's Soundfont and it seems to have LAPC-1 support.</p>
+
+<p>I think moving those files is all you need to do. EYE.BAT is probably not needed.</p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p>Okay, now roll sanity.</p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183325-title" id="p183325" class="post">
+								<h3 id="post-183325-title" class="old-or-sr">Reply 9 of 26, by Jorpho</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183325#p183325" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-22T16:27:20+00:00">2010-03-22, 16:27</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=600"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/600.png" width="66" height="54" alt="Jorpho’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=600" class="username"><span role="text presentation">Jorpho</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=600&amp;sr=posts" title="Search Jorpho’s posts">7223</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-02-14, 19:50</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Canada</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>l33t++</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">l33t++</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=600&amp;sr=posts" title="Search Jorpho’s posts">7223</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-02-14, 19:50</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Canada</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>So, what about Dungeon Hack?</p></div>
+
+						
+						
+
+																								
+											</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183329-title" id="p183329" class="post">
+								<h3 id="post-183329-title" class="old-or-sr">Reply 10 of 26, by keropi</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183329#p183329" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-22T18:18:37+00:00">2010-03-22, 18:18</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/1291_1495285984.png" width="74" height="100" alt="keropi’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291" class="username"><span role="text presentation">keropi</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>l33t++</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">l33t++</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>I just tried it, it crashed after hitting 2-3 times the ghosts on the 1st level</p>
+
+<p>edit: yep, always crashing after fighting the ghosts <span class="emoji" data-version="7" data-src="1f641" data-alt="slightly frowning face">🙁</span></p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p><span class="emoji" data-version="6" data-src="1f3b5" data-alt="musical note">🎵</span><a href="https://www.serdashop.com/ISA-MPU-Card">Link to buy a PCMIDI mpu</a><br>
+<span class="emoji" data-version="6" data-src="1f3a7" data-alt="headphone">🎧</span><a href="https://www.vogons.org/viewtopic.php?f=62&amp;t=70682">Orpheus soundcard project</a><br>
+<span class="emoji" data-version="6" data-src="1f4bb" data-alt="laptop computer">💻</span><a href="http://www.amibay.com/showthread.php?106094">WTB Amstrad PC7486SLC-33 system</a></p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183349-title" id="p183349" class="post">
+								<h3 id="post-183349-title" class="old-or-sr">Reply 11 of 26, by JemyM</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183349#p183349" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-22T21:30:50+00:00">2010-03-22, 21:30</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/19586_1503314370.jpg" width="100" height="100" alt="JemyM’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586" class="username"><span role="text presentation">JemyM</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>Newbie</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">Newbie</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>I went back and retried and I could defeat plenty of ghosts without issues. I ran the game in DOSBox with 15000 cycles, sound, graphics etc, everything runs perfectly fine.</p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p>Okay, now roll sanity.</p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183355-title" id="p183355" class="post">
+								<h3 id="post-183355-title" class="old-or-sr">Reply 12 of 26, by keropi</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183355#p183355" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-22T22:29:41+00:00">2010-03-22, 22:29</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/1291_1495285984.png" width="74" height="100" alt="keropi’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291" class="username"><span role="text presentation">keropi</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>l33t++</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">l33t++</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>allright more testing...</p>
+
+<p>1. game does not crash in a XMS-only enviroment. Only himem.sys loaded, sb16 init stuff and ctmouse.<br>
+2. with XMS only, then the sound routines have problems: you can only hear <b class="bb_b">one</b> sample at a time, and if a new one starts then the previous gets cut and there is lots of sound "popping" noises... also mouse seems off-center, it appears some pixels lower than it should...</p>
+
+<p>the original actually behaves better and with the same speed on a p200mmx  <span class="emoji" data-version="6" data-src="1f616" data-alt="confounded face">😖</span> <br>
+My test pc is a p200mmx , 64mb ram, a sb16+db50xg + lapc-i sound combo and a riva128 4MB vga... it actually gives me almost zero probs in other software too</p>
+
+<p>this is what I get after hitting the ghosts in the 1st level a couple of times:</p>
+
+<p><img src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/2941i07.jpg" class="bb_image" referrerpolicy="no-referrer" alt="2941i07.jpg"></p>
+
+<p>I believe this is sound related, replacing dll's from the sound drivers either crash on startup or freeze the computer...</p>
+
+<p>I wish sometime in the future (unlikely though...) some great coder like amiga's CFOU! creates a pc-version of EOB trilogy with the same features as CFOUS's engine (most notably: AUTOMAP)</p>
+
+<p><a href="http://eob.wikispaces.com/EOB2+AGA+GAME">http://eob.wikispaces.com/EOB2+AGA+GAME</a></p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p><span class="emoji" data-version="6" data-src="1f3b5" data-alt="musical note">🎵</span><a href="https://www.serdashop.com/ISA-MPU-Card">Link to buy a PCMIDI mpu</a><br>
+<span class="emoji" data-version="6" data-src="1f3a7" data-alt="headphone">🎧</span><a href="https://www.vogons.org/viewtopic.php?f=62&amp;t=70682">Orpheus soundcard project</a><br>
+<span class="emoji" data-version="6" data-src="1f4bb" data-alt="laptop computer">💻</span><a href="http://www.amibay.com/showthread.php?106094">WTB Amstrad PC7486SLC-33 system</a></p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183365-title" id="p183365" class="post">
+								<h3 id="post-183365-title" class="old-or-sr">Reply 13 of 26, by JemyM</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183365#p183365" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-23T07:54:20+00:00">2010-03-23, 07:54</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/19586_1503314370.jpg" width="100" height="100" alt="JemyM’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586" class="username"><span role="text presentation">JemyM</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>Newbie</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">Newbie</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>Am I right to presume that EoB3 is a different engine, just with the same visual look as one and two? That would mean that making EoB3 work on Amiga is like coding a new game from scratch (or at least rewriting/porting the code), a project which is unrelated to the AGA project of EoB1 and 2.</p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p>Okay, now roll sanity.</p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183366-title" id="p183366" class="post">
+								<h3 id="post-183366-title" class="old-or-sr">Reply 14 of 26, by keropi</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183366#p183366" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-23T08:01:23+00:00">2010-03-23, 08:01</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/1291_1495285984.png" width="74" height="100" alt="keropi’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291" class="username"><span role="text presentation">keropi</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>l33t++</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">l33t++</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>EOB1, EOB2 have the same engine , like Lands of Lore that uses a more advanced version of it. EOB3 uses it's own engine. <br>
+Now since all 3 games have their data analyzed (eob1+2 from cfous's work) and 3 from the available sources, it could be possible to build more advanced versions, the amiga ones are used as an example of what can be done with the games....<br>
+...one can dream <span class="emoji" data-version="6.1" data-src="1f600" data-alt="grinning face">😀</span></p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p><span class="emoji" data-version="6" data-src="1f3b5" data-alt="musical note">🎵</span><a href="https://www.serdashop.com/ISA-MPU-Card">Link to buy a PCMIDI mpu</a><br>
+<span class="emoji" data-version="6" data-src="1f3a7" data-alt="headphone">🎧</span><a href="https://www.vogons.org/viewtopic.php?f=62&amp;t=70682">Orpheus soundcard project</a><br>
+<span class="emoji" data-version="6" data-src="1f4bb" data-alt="laptop computer">💻</span><a href="http://www.amibay.com/showthread.php?106094">WTB Amstrad PC7486SLC-33 system</a></p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183374-title" id="p183374" class="post">
+								<h3 id="post-183374-title" class="old-or-sr">Reply 15 of 26, by JemyM</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183374#p183374" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-23T09:22:18+00:00">2010-03-23, 09:22</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/19586_1503314370.jpg" width="100" height="100" alt="JemyM’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586" class="username"><span role="text presentation">JemyM</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>Newbie</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">Newbie</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>With a lot of testing, I found out that the previous procedure was wrong. Ignore my previous instructions and instead take INTERP.EXE and MCGA.DLL from runtime.zip (look above). I wish mirekluza was here to set things straight. Note that if you follow the instructions in the post from 2009-1-22 @ 08:24 am, you will get issues, such as a dysfunctional mousecursor and popping sound (that is, if you use the precompiled ARUN.EXE from AESOP_INTERPRETER_BUILD_2a.zip and MCGA.DLL from Miles website).</p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p>Okay, now roll sanity.</p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183377-title" id="p183377" class="post">
+								<h3 id="post-183377-title" class="old-or-sr">Reply 16 of 26, by keropi</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183377#p183377" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-23T10:46:57+00:00">2010-03-23, 10:46</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/1291_1495285984.png" width="74" height="100" alt="keropi’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291" class="username"><span role="text presentation">keropi</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>l33t++</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">l33t++</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>awesome!!!! I will test+report later , mega thanks for the update!!!</p>
+
+<p>edit:</p>
+
+<p>OK I tried it, it does not crash , mouse is OK but there is sound popping... samples do not cut off, but there are "pops" . Those "pops" appear also in the normal version, but are more quiet...</p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p><span class="emoji" data-version="6" data-src="1f3b5" data-alt="musical note">🎵</span><a href="https://www.serdashop.com/ISA-MPU-Card">Link to buy a PCMIDI mpu</a><br>
+<span class="emoji" data-version="6" data-src="1f3a7" data-alt="headphone">🎧</span><a href="https://www.vogons.org/viewtopic.php?f=62&amp;t=70682">Orpheus soundcard project</a><br>
+<span class="emoji" data-version="6" data-src="1f4bb" data-alt="laptop computer">💻</span><a href="http://www.amibay.com/showthread.php?106094">WTB Amstrad PC7486SLC-33 system</a></p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183408-title" id="p183408" class="post">
+								<h3 id="post-183408-title" class="old-or-sr">Reply 17 of 26, by JemyM</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183408#p183408" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-23T17:01:11+00:00">2010-03-23, 17:01</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/19586_1503314370.jpg" width="100" height="100" alt="JemyM’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586" class="username"><span role="text presentation">JemyM</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>Newbie</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">Newbie</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>When do these pops happen?<br>
+In my game the game pops when MIDI goes on and off, but that's about it.</p>
+
+<p>I also noted that the audio is especially bad in Warriors' Tomb, mostly thanks to the monsters sound there, but gets better later on. Look at my playthrough on youtube (link in my first post here) and see if it sounds similar to what you are experiencing.</p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p>Okay, now roll sanity.</p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183410-title" id="p183410" class="post">
+								<h3 id="post-183410-title" class="old-or-sr">Reply 18 of 26, by keropi</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183410#p183410" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-23T17:34:26+00:00">2010-03-23, 17:34</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/1291_1495285984.png" width="74" height="100" alt="keropi’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=1291" class="username"><span role="text presentation">keropi</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>l33t++</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">l33t++</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=1291&amp;sr=posts" title="Search keropi’s posts">7598</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2003-09-08, 06:45</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Greece</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>the pops I am experiencing happen all the time, when you fight a monster for example and there are several samples playing... your videos definitely sound better</p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p><span class="emoji" data-version="6" data-src="1f3b5" data-alt="musical note">🎵</span><a href="https://www.serdashop.com/ISA-MPU-Card">Link to buy a PCMIDI mpu</a><br>
+<span class="emoji" data-version="6" data-src="1f3a7" data-alt="headphone">🎧</span><a href="https://www.vogons.org/viewtopic.php?f=62&amp;t=70682">Orpheus soundcard project</a><br>
+<span class="emoji" data-version="6" data-src="1f4bb" data-alt="laptop computer">💻</span><a href="http://www.amibay.com/showthread.php?106094">WTB Amstrad PC7486SLC-33 system</a></p></div>					</div>
+				</div>
+							</article>
+											<article aria-labelledby="post-183415-title" id="p183415" class="post">
+								<h3 id="post-183415-title" class="old-or-sr">Reply 19 of 26, by JemyM</h3>
+
+						
+
+				<div class="post_header">
+										<a class="post_date" data-icon="clock" href="https://www.vogons.org/viewtopic.php?p=183415#p183415" title="Permalink"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Posted on&nbsp;</span><time datetime="2010-03-23T18:34:32+00:00">2010-03-23, 18:34</time>
+					</a>
+					
+																												<ul class="toolbar post_actions" aria-label="Post actions">
+																																																																					<li class="post_license"><a class="post_license_button" data-icon="view-license" data-icon-only="" title="Creative Commons Attribution No Derivatives 1.0 Generic license" data-dim="" href="https://spdx.org/licenses/CC-BY-ND-1.0.html#licenseText"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Creative Commons Attribution No Derivatives 1.0 Generic license</span></a></li>
+
+
+
+													</ul>
+														</div>
+
+				<div class="post_container">
+					<div role="note" class="post_user" aria-label="Poster info">
+							<div class="post_user_avatar" aria-hidden="true">
+			<a class="post_user_avatar_link" href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586"><img class="avatar" src="./_New_ AESOP_16, AESOP_32 engine thread (Eye of Beholder 3, Dungeon Hack) _ VOGONS_files/19586_1503314370.jpg" width="100" height="100" alt="JemyM’s avatar"></a>		</div>
+								<div>
+		<div>
+			<address role="presentation" class="post_user_username">
+				<a href="https://www.vogons.org/memberlist.php?mode=viewprofile&amp;u=19586" class="username"><span role="text presentation">JemyM</span></a>
+				<span role="presentation" class="post_user_online" data-hide-below-sxs-post="" title="Offline"><span class="old-or-sr">Offline</span></span>
+			</address>
+			<details class="popup post_user_detail" data-show-below-sxs-post="">
+				<summary class="popup_button" aria-haspopup="menu">
+					<span class="button post_user_detail_button" data-icon="more" data-icon-only="" title="User metadata"><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">User metadata</span></span>
+				</summary>
+				<div class="popup_content">
+					<dl role="associationlist definitionlist" class="popup_content_inner post_user_detail_content">
+										<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+					</dl>
+				</div>
+			</details>
+		</div>
+					<div data-show-below-sxs-post="">
+																	<span class="old-or-sr">Rank</span>
+				<span>Newbie</span>
+																</div>
+			</div>
+	
+	<dl role="associationlist definitionlist" data-hide-below-sxs-post="">
+					<div role="presentation">
+																	<dt role="associationlistitemkey term" class="old-or-sr">Rank</dt>
+				<dd role="associationlistitemvalue definition">Newbie</dd>
+																</div>
+		
+						<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="topic"><span aria-hidden="true" data-icon-slot="" title="Posts"></span><span class="old-or-sr">Posts</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value"><a class="post_user_meta_link" href="https://www.vogons.org/search.php?author_id=19586&amp;sr=posts" title="Search JemyM’s posts">20</a></dd>
+		</div>
+	
+			<div role="presentation" class="post_user_meta">
+			<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="show-guests"><span aria-hidden="true" data-icon-slot="" title="Joined"></span><span class="old-or-sr">Joined</span></dt>
+			<dd role="associationlistitemvalue definition" class="post_user_meta_value">2010-03-18, 17:35</dd>
+		</div>
+		
+										<div role="presentation" class="post_user_meta">
+				<dt role="associationlistitemkey term" class="post_user_meta_key" data-icon="location"><span aria-hidden="true" data-icon-slot="" title="Location"></span><span class="old-or-sr">Location</span></dt>
+				<dd role="associationlistitemvalue definition" class="post_user_meta_value">Sweden</dd>
+			</div>
+							
+				
+	</dl>
+
+				</div>
+
+
+					<div class="post_main">
+						
+								
+	
+
+						
+						<div class="post_content"><p>Have you tried to dump the entire runtime.zip and sound.zip in there? just overwriting all the files?</p></div>
+
+						
+						
+
+																								
+						<div role="note" class="post_signature" aria-label="Signature"><p>Okay, now roll sanity.</p></div>					</div>
+				</div>
+							</article>
+						</div>
+
+	<div class="table-trailer">
+				<div class="actions">
+			
+			
+			
+					<span>
+		<a class="button" href="https://www.vogons.org/viewtopic.php?t=20601#top" data-icon="to-top" data-icon-only="" data-opaque="" title="Go to top of page" data-hide-below-title=""><span aria-hidden="true" data-icon-slot=""></span><span class="old-or-sr">Go to top of page</span></a>
+		<a class="button" href="https://www.vogons.org/viewtopic.php?t=20601#top" data-icon="to-top" data-opaque="" data-show-below-title=""><span aria-hidden="true" data-icon-slot=""></span><span>Go to top of page</span></a>
+	</span>
+	<nav aria-hidden="true">
+				<ul class="pagination link-group" data-opaque="">
+												<li aria-current="page"><span class="link-group_spacer mono pagination_current" data-highlight="" data-icon="pagination"><span aria-hidden="true" data-icon-slot=""></span><span role="text presentation"><span class="old-or-sr">Page&nbsp;</span>1</span></span></li>
+																<li class="mono pagination_item"><a class="link-group_link pagination_link" href="https://www.vogons.org/viewtopic.php?f=7&amp;t=20601&amp;start=20"><span><span class="old-or-sr">Page&nbsp;</span>2</span></a></li>
+																</ul>
+	</nav>
+
+
+					</div>
+
+				<a class="button" href="https://www.vogons.org/viewforum.php?f=7" data-icon="exit" data-opaque=""><span aria-hidden="true" data-icon-slot=""></span><span class="shrink-label">Back to DOS</span></a>
+
+	</div>
+
+	</article>
+
+
+
+									</main>
+
+				
+				<hr class="old">
+
+				<footer class="footer" role="contentinfo">
+					<div class="copyright">
+						<div class="copyright_content">
+														VOGONS site design is distributed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC <br>license</a>. User-generated content is distributed under <br>our <a href="https://www.vogons.org/licenses">open content policy</a>. ©&nbsp;2002–2020 vogons.org.
+														<div class="copyright_terms">
+								<span class="copyright_item"><a href="https://www.vogons.org/ucp.php?mode=terms">Terms of use</a></span>
+								<span class="copyright_item"><a href="https://www.vogons.org/ucp.php?mode=privacy">Privacy policy</a></span>
+																	<span class="copyright_item"><a href="https://www.vogons.org/memberlist.php?mode=contactadmin">Contact us</a></span>
+															</div>
+													</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+				<div id="page-footer">
+			<div id="darkenwrapper" class="darkenwrapper" data-l-loading="Loading" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." role="alertdialog" aria-modal="true" aria-labelledby="phpbb_alert_label" aria-describedby="phpbb_alert_text">
+				<span class="sr" data-guard="" tabindex="0"></span>
+				<span class="button alert_close" data-icon="cancel" data-icon-only="" role="button" tabindex="0"><span aria-hidden="true" data-icon-slot=""></span><span class="sr">Close window</span></span>
+				<span id="phpbb_alert_label" class="alert_title" role="heading" aria-level="2"></span>
+				<div role="alert" id="phpbb_alert_text" class="alert_text alert_alert-text mini-spaced"></div>
+				<span class="sr" data-guard="0" tabindex="0"></span>
+			</div>
+
+			<div id="phpbb_confirm" class="phpbb_alert" role="alertdialog" aria-modal="true" aria-describedby="phpbb_confirm_text">
+				<span class="sr" data-guard="" tabindex="0"></span>
+				<span class="button alert_close" data-icon="cancel" data-icon-only="" role="button" tabindex="0"><span aria-hidden="true" data-icon-slot=""></span><span class="sr">Close window</span></span>
+				<div role="alert" id="phpbb_confirm_text" class="alert_text"></div>
+				<span class="sr" data-guard="0" tabindex="0"></span>
+			</div>
+		</div>
+
+						<script type="application/json" id="emoji-config">{"v":"223_1577471122","u":"\/emoji\/"}</script>
+	
+
+</body></html>

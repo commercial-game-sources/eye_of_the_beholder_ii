@@ -1,0 +1,73 @@
+!define BLANK ""
+D:\work\disassemb\convert.obj : D:\work\disassemb\convert.c .AUTODEPEND
+ @D:
+ cd D:\work\disassemb
+ *wcc386 convert.c -i=D:\WATCOM\h;D:\WATCOM\h\nt -w4 -e25 -zp1 -zq -od -d2 -&
+6r -bt=nt -mf
+
+D:\work\disassemb\daesop.obj : D:\work\disassemb\daesop.c .AUTODEPEND
+ @D:
+ cd D:\work\disassemb
+ *wcc386 daesop.c -i=D:\WATCOM\h;D:\WATCOM\h\nt -w4 -e25 -zp1 -zq -od -d2 -6&
+r -bt=nt -mf
+
+D:\work\disassemb\damap.obj : D:\work\disassemb\damap.c .AUTODEPEND
+ @D:
+ cd D:\work\disassemb
+ *wcc386 damap.c -i=D:\WATCOM\h;D:\WATCOM\h\nt -w4 -e25 -zp1 -zq -od -d2 -6r&
+ -bt=nt -mf
+
+D:\work\disassemb\dasm.obj : D:\work\disassemb\dasm.c .AUTODEPEND
+ @D:
+ cd D:\work\disassemb
+ *wcc386 dasm.c -i=D:\WATCOM\h;D:\WATCOM\h\nt -w4 -e25 -zp1 -zq -od -d2 -6r &
+-bt=nt -mf
+
+D:\work\disassemb\dblocks.obj : D:\work\disassemb\dblocks.c .AUTODEPEND
+ @D:
+ cd D:\work\disassemb
+ *wcc386 dblocks.c -i=D:\WATCOM\h;D:\WATCOM\h\nt -w4 -e25 -zp1 -zq -od -d2 -&
+6r -bt=nt -mf
+
+D:\work\disassemb\dict.obj : D:\work\disassemb\dict.c .AUTODEPEND
+ @D:
+ cd D:\work\disassemb
+ *wcc386 dict.c -i=D:\WATCOM\h;D:\WATCOM\h\nt -w4 -e25 -zp1 -zq -od -d2 -6r &
+-bt=nt -mf
+
+D:\work\disassemb\dvar.obj : D:\work\disassemb\dvar.c .AUTODEPEND
+ @D:
+ cd D:\work\disassemb
+ *wcc386 dvar.c -i=D:\WATCOM\h;D:\WATCOM\h\nt -w4 -e25 -zp1 -zq -od -d2 -6r &
+-bt=nt -mf
+
+D:\work\disassemb\rentry.obj : D:\work\disassemb\rentry.c .AUTODEPEND
+ @D:
+ cd D:\work\disassemb
+ *wcc386 rentry.c -i=D:\WATCOM\h;D:\WATCOM\h\nt -w4 -e25 -zp1 -zq -od -d2 -6&
+r -bt=nt -mf
+
+D:\work\disassemb\utils.obj : D:\work\disassemb\utils.c .AUTODEPEND
+ @D:
+ cd D:\work\disassemb
+ *wcc386 utils.c -i=D:\WATCOM\h;D:\WATCOM\h\nt -w4 -e25 -zp1 -zq -od -d2 -6r&
+ -bt=nt -mf
+
+D:\work\disassemb\daesop.exe : D:\work\disassemb\convert.obj D:\work\disasse&
+mb\daesop.obj D:\work\disassemb\damap.obj D:\work\disassemb\dasm.obj D:\work&
+\disassemb\dblocks.obj D:\work\disassemb\dict.obj D:\work\disassemb\dvar.obj&
+ D:\work\disassemb\rentry.obj D:\work\disassemb\utils.obj .AUTODEPEND
+ @D:
+ cd D:\work\disassemb
+ @%write daesop.lk1 FIL convert.obj,daesop.obj,damap.obj,dasm.obj,dblocks.ob&
+j,dict.obj,dvar.obj,rentry.obj,utils.obj
+ @%append daesop.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b daesop.imp 
+ @%append daesop.lk1 LIBR daesop.imp
+!endif
+!ifneq BLANK ""
+ @%append daesop.lk1 op resource=
+!endif
+ *wlink name daesop d all SYS nt op m op maxe=25 op q op symf @daesop.lk1
+

@@ -1,0 +1,194 @@
+//лллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+//лл                                                                        лл
+//лл  AMAZE.SOP                                                             лл
+//лл                                                                        лл
+//лл  Sample state-object program                                           лл
+//лл                                                                        лл
+//лл  Project: Extensible State-Object Processor (AESOP/16)                 лл
+//лл   Author: John Miles                                                   лл
+//лл                                                                        лл
+//лл  Compatible with AESOP/16 v1.0                                         лл
+//лл                                                                        лл
+//лллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+//лл                                                                        лл
+//лл  Copyright (C) 1992 Miles Design, Inc.                                 лл
+//лл                                                                        лл
+//лл  Miles Design, Inc.                                                    лл
+//лл  10926 Jollyville #308                                                 лл
+//лл  Austin, TX 78759                                                      лл
+//лл  (512) 345-2642 / BBS (512) 454-9990 / FAX (512) 338-9630              лл
+//лл                                                                        лл
+//лллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+
+#depend "arc.exe"       // for test purposes, recompile when ARC.EXE changes
+#depend "$obsolete"
+
+#define PAGE1 0         // default window numbers for display and staging
+#define PAGE2 1         // screens
+
+#define X_SIZE 40
+#define Y_SIZE 25
+
+#define X_M (X_SIZE-2)
+#define Y_M (Y_SIZE-2)
+
+#define CEL_FRONTIER -1
+#define CEL_VIRGIN   0
+#define CEL_N        1
+#define CEL_E        2
+#define CEL_S        4
+#define CEL_W        8
+#define CEL_BORDER   100
+
+object "amaze"
+{
+   long p,c,d;
+   word fizzle;
+   word i,t,f,x,y,mx,my,nx,ny,dir;
+   private word dx[4],dy[4],cel[4],adj[4];
+   private byte maze[Y_SIZE][X_SIZE];
+
+   procedure make_frontier
+      {
+      long tx,ty;
+
+      for (dir=0;dir<4;dir++)
+         {
+         x = tx+dx[dir];
+         y = ty+dy[dir];
+
+         if (maze[y][x] == CEL_VIRGIN)
+            maze[y][x] = CEL_FRONTIER;
+         }
+      }
+
+   message "create"
+      {
+      init_graphics();
+      init_sound("Ad Lib FM driver","Voice file #2");
+
+      set_palette("Maze palette");
+
+      for (y=0;y<Y_SIZE;y++)
+         for (x=0;x<X_SIZE;x++)
+            if (x==0 or y==0 or x==X_SIZE-1 or y==Y_SIZE-1)
+               maze[y][x] = CEL_BORDER;
+            else
+               maze[y][x] = CEL_VIRGIN;
+
+      dx[0] =  0; dy[0] = -1;
+      dx[1] =  1; dy[1] =  0;
+      dx[2] =  0; dy[2] =  1;
+      dx[3] = -1; dy[3] =  0;
+
+      cel[0] = CEL_N; cel[1] = CEL_E;
+      cel[2] = CEL_S; cel[3] = CEL_W;
+
+      adj[0] = CEL_S; adj[1] = CEL_W;
+      adj[2] = CEL_N; adj[3] = CEL_E;
+
+      play_sequence("Couple Days Off");
+
+      for (y=0;y<Y_SIZE;y++)
+         for (x=0;x<X_SIZE;x++)
+            draw_cell(X_SIZE,Y_SIZE,x,y,maze[3],32+x/10+y/6);
+
+      dir = rnd(0,3);
+      mx  = rnd(2,X_M-1); nx = mx + dx[dir];
+      my  = rnd(2,Y_M-1); ny = my + dy[dir];
+
+      maze[my][mx] += cel[dir];
+      maze[ny][nx] += adj[dir];
+
+      tx = mx; ty = my; make_frontier;
+      tx = nx; ty = ny; make_frontier;
+
+      x = mx;
+      y = my;
+
+      loop
+         {
+         mx = x;
+         my = y;
+      
+         loop
+            {
+            dir = rnd(0,3);
+
+            nx = mx+dx[dir];
+            ny = my+dy[dir];
+
+            if (maze[ny][nx] == CEL_FRONTIER)
+               break;
+            }
+
+         maze[my][mx] += cel[dir];
+         maze[ny][nx] = adj[dir];
+
+         draw_cell(X_SIZE,Y_SIZE,mx,my,maze,32+x/10+y/6);
+
+         for (dir=f=0;dir<4;dir++)
+            {
+            x = nx+dx[dir];
+            y = ny+dy[dir];
+
+            if ((maze[y][x] == CEL_FRONTIER) or
+               (maze[y][x] == CEL_VIRGIN))
+                  {
+                  f = 1;
+                  maze[y][x] = CEL_FRONTIER;
+                  }
+            }
+
+         x = nx;
+         y = ny;
+
+         if (f) continue;
+
+         i = 0;
+         for (my=0;my<Y_SIZE;my++)
+            for (mx=0;mx<X_SIZE;mx++)
+               if (maze[my][mx] == CEL_FRONTIER)
+                  {
+                  i = 1;
+                  break(2);
+                  }
+
+         if (!i) break;
+
+         loop
+            {
+            dir = rnd(0,3);
+
+            x = mx+dx[dir];
+            y = my+dy[dir];
+
+            if ((maze[y][x] >= CEL_N) and
+               (maze[y][x] <  CEL_BORDER))
+               break;
+            }
+         }
+
+      while (not inkey())
+         {
+         d = read_palette(32);
+         for (p=33;p<=48;p++)
+            {
+            if (not (p % 4)) wait_vertical_retrace();
+
+            c = read_palette(p);
+            write_palette(p-1,c);
+            }
+         write_palette(48,d);
+         }
+      getkey();
+
+      shutdown_sound();
+      shutdown_graphics();
+
+      fizzle = create_object("fizzle",1,2,3);
+      send_message(fizzle,"snowstorm");
+      destroy_object(fizzle);
+      }
+}
+
